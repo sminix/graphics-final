@@ -19,8 +19,8 @@
 class Ball{
 
   //Placeholders so everything compiles.  Customize for your ship
-  vec2 ball_vert[11];
-  vec3 ball_color[11];
+  vec2 ball_vert[20];
+  vec3 ball_color[20];
   
   //Record of the ship's state
   struct {

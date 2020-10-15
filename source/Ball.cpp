@@ -10,16 +10,16 @@
 
 //Ship constructor
 Ball::Ball(){
-  //made ship shape and color
+  //made ball shape and color
   ball_vert[0] = vec2(0.0,0.0);
   ball_color[0] = vec3(1,1,1);
-  for (unsigned int i = 1; i <= 10; i ++){
-	ball_vert[i] = vec2(cos((40 * (i - 1))*(3.1415/180)), sin((40 * (i-1))*(3.1415/180)));
+  for (unsigned int i = 0; i <= 18; i ++){
+	ball_vert[i+1] = vec2(cos((20 * i)*(3.1415/180)), sin((20 * i)*(3.1415/180)));
 	if (i%2 == 0){
-	  ball_color[i] = vec3(1,1,1);
+	  ball_color[i+1] = vec3(1,1,1);
 	}
 	else{
-	  ball_color[i] = vec3(0,0,0);
+	  ball_color[i+1] = vec3(0,0,0);
 	}
   }
 
@@ -183,7 +183,7 @@ void Ball::draw(mat4 proj){
   glUniformMatrix4fv( GLvars.M_location, 1, GL_TRUE, proj );
   
   //Draw something
-  glDrawArrays(GL_TRIANGLE_FAN, 0, 11);
+  glDrawArrays(GL_TRIANGLE_FAN, 0, 20);
   /*
   if(state.thruster_on){
     //Maybe draw something different if the thruster is on
