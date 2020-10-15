@@ -45,6 +45,32 @@ Ship::Ship(){
 
 //Called everytime an animation tick happens
 void Ship::update_state(){
+  
+  // Create a vertex array object
+  glGenVertexArrays( 1, &GLvars.vao );
+  //Set GL state to use vertex array object
+  glBindVertexArray( GLvars.vao );
+  
+  //Generate buffer to hold our vertex data
+  glGenBuffers( 1, &GLvars.buffer );
+  //Set GL state to use this buffer
+  glBindBuffer( GL_ARRAY_BUFFER, GLvars.buffer );
+  
+  //Create GPU buffer to hold vertices and color
+  glBufferData( GL_ARRAY_BUFFER, sizeof(ship_vert) + sizeof(ship_color), NULL, GL_STATIC_DRAW );
+  //First part of array holds vertices
+  glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(ship_vert), ship_vert );
+  //Second part of array hold colors (offset by sizeof(triangle))
+  glBufferSubData( GL_ARRAY_BUFFER, sizeof(ship_vert), sizeof(ship_color), ship_color );
+  
+  glEnableVertexAttribArray(GLvars.vpos_location);
+  glEnableVertexAttribArray(GLvars.vcolor_location );
+  
+  glVertexAttribPointer( GLvars.vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0) );
+  glVertexAttribPointer( GLvars.vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(ship_vert)) );
+  
+  glBindVertexArray(0);
+  
   if (state.thruster_on){
     state.acceleration.x = state.pointing.x * _ACC;
     state.acceleration.y = state.pointing.y * _ACC;
@@ -178,7 +204,7 @@ void Ship::gl_init(){
   glVertexAttribPointer( GLvars.vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0) );
   glVertexAttribPointer( GLvars.vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(ship_vert)) );
   
-  glBindVertexArray(0);
+  glBindVertexArray(GLvars.vao);
 
 }
 
@@ -200,9 +226,12 @@ void Ship::draw(mat4 proj){
     glDrawArrays(GL_TRIANGLES, 7, 3);
     
   }
+  
   glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(ship_vert), ship_vert );
   
   glBindVertexArray(0);
   glUseProgram(0);
 
 }
+
+

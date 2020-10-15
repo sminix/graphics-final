@@ -2,7 +2,7 @@
 
 using namespace Angel;
 
-Ship ship;
+Ball ball;
 
 static void error_callback(int error, const char* description)
 {
@@ -14,17 +14,19 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     glfwSetWindowShouldClose(window, GLFW_TRUE);
   if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    ship.rotateLeft();
+    ball.rotateLeft();
   if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    ship.rotateRight();
+    ball.rotateRight();
+  /*
   if (key == GLFW_KEY_SPACE){
     if(action == GLFW_PRESS){
-      ship.start_thruster();
+      ball.start_thruster();
     }
     if(action == GLFW_RELEASE){
-      ship.stop_thruster();
+      ball.stop_thruster();
     }
   }
+   */
   if (key == GLFW_KEY_Z && action == GLFW_PRESS){
     //!!!!!!!!Fire bullet
   }
@@ -32,10 +34,10 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 
 void init(){
   
-  glClearColor(0.0, 0.0, 0.0, 1.0);
+  glClearColor(0.0, 1.0, 0.0, 1.0);
   glHint (GL_LINE_SMOOTH_HINT, GL_NICEST);
   glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
-  ship.gl_init();
+  ball.gl_init();
   
 }
 
@@ -43,7 +45,7 @@ void init(){
 void animate(){
   if(glfwGetTime() > 0.033){
     glfwSetTime(0.0);
-    ship.update_state();
+    ball.update_state();
   }
 }
 
@@ -64,7 +66,7 @@ int main(void)
   glfwWindowHint(GLFW_SAMPLES, 10);
   
   
-  window = glfwCreateWindow(1024, 768, "Asteroids!", NULL, NULL);
+  window = glfwCreateWindow(1024, 768, "Soccer!", NULL, NULL);
   if (!window){
     glfwTerminate();
     exit(EXIT_FAILURE);
@@ -92,7 +94,7 @@ int main(void)
     
     glClear(GL_COLOR_BUFFER_BIT);
     
-    ship.draw(proj);
+    ball.draw(proj);
     
     glfwSwapBuffers(window);
     glfwPollEvents();

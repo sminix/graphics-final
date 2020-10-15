@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __Asteroids__Ship__
-#define __Asteroids__Ship__
+#ifndef __soccer__Ball__
+#define __soccer__Ball__
 
 #include "common.h"
 
@@ -16,11 +16,11 @@
 #define _ACC 3
 #define _ROT 15
 
-class Ship{
+class Ball{
 
   //Placeholders so everything compiles.  Customize for your ship
-  vec2 ship_vert[10];
-  vec3 ship_color[10];
+  vec2 ball_vert[11];
+  vec3 ball_color[11];
   
   //Record of the ship's state
   struct {
@@ -39,7 +39,7 @@ class Ship{
     }
     vec2 acceleration;   //Acceleration
     vec2 velocity;       //Velocity
-    bool thruster_on;    //Boolean if a thruster is on
+    //bool thruster_on;    //Boolean if a thruster is on
   } state;
   
   //OpenGL variables for a ship
@@ -56,17 +56,17 @@ class Ship{
 public:
   
 
-  Ship();
+  Ball();
   
-  inline void start_thruster(){ state.thruster_on= true;}
-  inline void stop_thruster() { state.thruster_on= false;}
+  //inline void start_thruster(){ state.thruster_on= true;}
+  //inline void stop_thruster() { state.thruster_on= false;}
 
   inline void rotateLeft() {
     state.angle+=_ROT;
     mat2 c = state.RotateZ2D(state.angle);
     mat2 d = state.RotateZ2D(_ROT);
-    for (unsigned int i = 0; i < sizeof(ship_vert)/sizeof(ship_vert[0]); i++){
-      ship_vert[i] = (d * (ship_vert[i] - state.cur_location)) + state.cur_location;
+    for (unsigned int i = 0; i < sizeof(ball_vert)/sizeof(ball_vert[0]); i++){
+      ball_vert[i] = (d * (ball_vert[i] - state.cur_location)) + state.cur_location;
     }
     state.pointing = normalize(c * vec2(0,1));
     
@@ -75,8 +75,8 @@ public:
     state.angle-=_ROT;
     mat2 d = state.RotateZ2D(-1 * _ROT);
     mat2 c = state.RotateZ2D(state.angle);
-    for (unsigned int i = 0; i < sizeof(ship_vert)/sizeof(ship_vert[0]); i++){
-      ship_vert[i] = (d * (ship_vert[i] - state.cur_location)) + state.cur_location;
+    for (unsigned int i = 0; i < sizeof(ball_vert)/sizeof(ball_vert[0]); i++){
+      ball_vert[i] = (d * (ball_vert[i] - state.cur_location)) + state.cur_location;
     }
     state.pointing = normalize(c * vec2(0, 1));
   }
