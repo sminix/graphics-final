@@ -14,7 +14,7 @@ Player::Player(vec2 loc, char team){
   //made player shape and color
   player_vert[0] = loc;
   for (unsigned int i = 0; i <= 18; i ++){
-    player_vert[i+1] = vec2(cos((20 * i)*(3.1415/180)) + loc.x, sin((20 * i)*(3.1415/180)) + loc.y);
+	player_vert[i+1] = vec2(1.5*cos((20 * i)*(3.1415/180)) + loc.x, 1.5*sin((20 * i)*(3.1415/180)) + loc.y);
   }
   if(team == 'r'){
     player_color[0] = vec3(1,0,0);
@@ -32,10 +32,10 @@ Player::Player(vec2 loc, char team){
 
   state.cur_location = loc;
   state.angle = 0;
-  state.pointing = (0.0,1.0);
+  state.pointing = vec2(0.0,1.0);
   //state.thruster_on = false;
-  state.velocity = (0.0, 0.0);
-  state.acceleration = (0.0, 0.0);
+  state.velocity = vec2(0.0, 0.0);
+  state.acceleration = vec2(0.0, 0.0);
   state.team = team;
 };
 
