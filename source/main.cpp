@@ -51,8 +51,41 @@ bool inside;
 void inside_outside_test(vec2 point){
   
   
-  for (unsigned int i = 0; i < 1; i++){
+  for (unsigned int i = 0; i < 6; i++){
 	Player player = players[i];
+	
+	float xmax = player.player_vert[0].x;
+	float xmin = player.player_vert[0].x;
+	float ymax = player.player_vert[0].y;
+	float ymin = player.player_vert[0].y;
+	
+	for (unsigned int j = 1; j<20; j++){
+	  float x = player.player_vert[j].x;
+	  float y = player.player_vert[j].y;
+	  
+	  if (x > xmax){
+		xmax = x;
+	  }
+	  if (x < xmin){
+		xmin = x;
+	  }
+	  if (y > ymax){
+		ymax = y;
+	  }
+	  if (y < ymin){
+		ymin = y;
+	  }
+	}
+	std::cout << xmax << " " << xmin << " " << ymax << " " <<  ymin << std::endl;
+	std::cout << point.x << " " << point.y << std::endl;
+	if (point.x < xmax and point.x > xmin and point.y < ymax and point.y > ymin){
+	  in_out[i] = true;
+	}
+	else {
+	  in_out[i] = false;
+	}
+	
+	/*
 	int counter = 0;
 	
 	for (unsigned int j = 1; j < 20; j++){
@@ -68,18 +101,18 @@ void inside_outside_test(vec2 point){
 		head = player.player_vert[j+1];
 	  }
 	  
-	  if (tail.x < head.x){
+	  if (tail.y < head.y){
 		std::swap(head,tail);
 	  }
-	  
-	  if (tail.x-head.x ==0){
+	  //horizontal test
+	  if (tail.y-head.y ==0){
 		continue;
 	  }
 	  
-	  if (point.x < head.x and point.x < tail.x){
+	  if (point.y < head.y and point.y < tail.y){
 		continue;
 	  }
-	  if (point.x > head.x and point.x > tail.x){
+	  if (point.y > head.y and point.y > tail.y){
 		continue;
 	  }
 	  
@@ -105,7 +138,9 @@ void inside_outside_test(vec2 point){
 	}
   
 	in_out[i] = inside;
+	 */
   }
+	 
 }
 
 
@@ -113,11 +148,10 @@ static void cursor_position_callback(GLFWwindow* window, double xpos, double ypo
 {
   //Assuming the default frustrum with extents from -1 to 1, this converts
   //the screen cursor position to world coordinates
-  int width = 1024;
-  int height = 768;
+  int width, height;
   glfwGetFramebufferSize(window, &width, &height);
-  xpos = xpos/width*2.0 - 1.0;
-  ypos = -(ypos/height*2.0 - 1.0);
+  xpos = xpos/width*40.0 - 20.0;
+  ypos = -(ypos/height*40.0 - 20.0);
   
   inside_outside_test(vec2(xpos, ypos));
 }
@@ -129,11 +163,11 @@ void init(){
   glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
   ball->gl_init();
   player1->gl_init();
-  //player2->gl_init();
-  //player3->gl_init();
-  //player4->gl_init();
-  //player5->gl_init();
-  //player6->gl_init();
+  player2->gl_init();
+  player3->gl_init();
+  player4->gl_init();
+  player5->gl_init();
+  player6->gl_init();
   
 }
 
@@ -179,20 +213,20 @@ int main(void)
   glfwSwapInterval(1);
   
   player1 = new Player(vec2(-10,-10), 'r');
-  //player2 = new Player(vec2(0,-10), 'r');
-  //player3 = new Player(vec2(10,-10), 'r');
-  //player4 = new Player(vec2(-10, 10), 'b');
-  //player5 = new Player(vec2(0, 10), 'b');
-  //player6 = new Player(vec2(10, 10), 'b');
+  player2 = new Player(vec2(0,-10), 'r');
+  player3 = new Player(vec2(10,-10), 'r');
+  player4 = new Player(vec2(-10, 10), 'b');
+  player5 = new Player(vec2(0, 10), 'b');
+  player6 = new Player(vec2(10, 10), 'b');
   ball = new Ball();
   init();
   
   players.push_back(*player1);
-  //players.push_back(*player2);
-  //players.push_back(*player3);
-  //players.push_back(*player4);
-  //players.push_back(*player5);
-  //players.push_back(*player6);
+  players.push_back(*player2);
+  players.push_back(*player3);
+  players.push_back(*player4);
+  players.push_back(*player5);
+  players.push_back(*player6);
   
   for (unsigned int i = 0; i < 6; i ++){
 	in_out.push_back(false);
@@ -214,16 +248,16 @@ int main(void)
     
     ball->draw(proj);
     player1->draw(proj);
-    //player2->draw(proj);
-    //player3->draw(proj);
-    //player4->draw(proj);
-    //player5->draw(proj);
-    //player6->draw(proj);
+    player2->draw(proj);
+    player3->draw(proj);
+    player4->draw(proj);
+    player5->draw(proj);
+    player6->draw(proj);
     
     glfwSwapBuffers(window);
     glfwPollEvents();
 	
-	for (unsigned int i = 0; i < 1; i ++){
+	for (unsigned int i = 0; i < 6; i ++){
 	  std::cout << i + 1 <<  ": " << in_out[i] << std::endl;
 	}
 	
