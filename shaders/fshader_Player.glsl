@@ -5,4 +5,13 @@
 //  Created by Gabriel Harris on 12/2/20.
 //
 
-#include <stdio.h>
+#version 150
+
+in  vec4 colorP;
+out vec4 fragColorP;
+
+void
+main()
+{
+  fragColorP = colorP;
+}

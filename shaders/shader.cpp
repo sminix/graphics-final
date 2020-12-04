@@ -6,4 +6,4 @@
 
 #include "shader.h"
 
-std::string shader_path = "/Users/Sam/Desktop/intro-graphics/graphics-final/shaders/";
+std::string shader_path = "/Users/gabrielharris/Desktop/Programming/ComputerGraphics/graphics-final/shaders/";

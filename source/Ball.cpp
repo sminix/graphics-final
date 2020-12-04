@@ -8,7 +8,7 @@
 
 #include "common.h"
 
-//Ship constructor
+//Ball constructor
 Ball::Ball(){
   //made ball shape and color
   ball_vert[0] = vec2(0.0,0.0);
@@ -34,22 +34,13 @@ Ball::Ball(){
 
 //Called everytime an animation tick happens
 void Ball::update_state(){
-  /*
-  if (state.thruster_on){
-    state.acceleration.x = state.pointing.x * _ACC;
-    state.acceleration.y = state.pointing.y * _ACC;
-	
-    state.velocity.x += state.acceleration.x * 0.033;
-    state.velocity.y += state.acceleration.y * 0.033; //0.033 is the dt
-  }
-  else {
-    //how much to dampen the velocity here?
+  
 	state.acceleration.x = 0;
 	state.acceleration.y = 0;
 	state.velocity.x *= _DAMPING;
 	state.velocity.y *= _DAMPING;
-  }
-   */
+  
+   
   //limit the velocity
   //need to use pythagorean theorem here? What to set velocity to in this case?
   //bc need x and y component
@@ -173,11 +164,12 @@ void Ball::gl_init(){
 
 }
 
-//Draw a ship
+//Draw a ball
 void Ball::draw(mat4 proj){
   
   glUseProgram( GLvars.program );
   glBindVertexArray( GLvars.vao );
+  glBindBuffer(GL_ARRAY_BUFFER, GLvars.buffer);
   
   //If you have a modelview matrix, pass it with proj
   glUniformMatrix4fv( GLvars.M_location, 1, GL_TRUE, proj );

@@ -34,9 +34,13 @@ add_executable(soccer WIN32 MACOSX_BUNDLE
 	shaders/shader.cpp
 	source/main.cpp
 	source/Ball.cpp
-	source/Ball.h 
+	source/Ball.h
+  source/player.cpp
+  source/player.h
 	shaders/fshader_Ship.glsl
-	shaders/vshader_Ship.glsl)
+	shaders/vshader_Ship.glsl
+  shaders/vshader_Player.glsl
+  shaders/fshader_Player.glsl)
 	
 #Windows cleanup
 if (MSVC)
