@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/CMakeFiles/ZERO_CHECK
+	/Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/build/glfw-3.2/CMakeFiles/ZERO_CHECK
 
 
-/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/CMakeFiles/ZERO_CHECK: 
+/Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/build/glfw-3.2/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/CMakeScripts/ReRunCMake.make
+	make -f /Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/build/glfw-3.2/CMakeScripts/ReRunCMake.make

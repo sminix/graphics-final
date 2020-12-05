@@ -2,9 +2,9 @@
 # Custom rules for ALL_BUILD
 .SUFFIXES: 
 all: \
-	/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/ALL_BUILD
+	/Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/build/CMakeFiles/ALL_BUILD
 
 
-/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/ALL_BUILD: 
+/Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/build/CMakeFiles/ALL_BUILD: 
 	echo ""
 	echo Build\ all\ projects

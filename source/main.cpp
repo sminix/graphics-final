@@ -14,7 +14,7 @@ Player *player6;
 std::vector < Player > players;
 
 std::vector<bool> in_out;
-
+std::vector<bool> launch;
 
 
 static void error_callback(int error, const char* description)
@@ -53,96 +53,36 @@ void inside_outside_test(vec2 point){
   
   for (unsigned int i = 0; i < 6; i++){
 	Player player = players[i];
-	
-	float xmax = player.player_vert[0].x;
-	float xmin = player.player_vert[0].x;
-	float ymax = player.player_vert[0].y;
-	float ymin = player.player_vert[0].y;
-	
-	for (unsigned int j = 1; j<20; j++){
-	  float x = player.player_vert[j].x;
-	  float y = player.player_vert[j].y;
-	  
-	  if (x > xmax){
-		xmax = x;
-	  }
-	  if (x < xmin){
-		xmin = x;
-	  }
-	  if (y > ymax){
-		ymax = y;
-	  }
-	  if (y < ymin){
-		ymin = y;
-	  }
-	}
-	std::cout << xmax << " " << xmin << " " << ymax << " " <<  ymin << std::endl;
-	std::cout << point.x << " " << point.y << std::endl;
-	if (point.x < xmax and point.x > xmin and point.y < ymax and point.y > ymin){
+
+	float px = player.player_vert[0].x;
+	float py = player.player_vert[0].y;
+	//add and subtract 1.5 because that is radius of the player
+	if (point.x < px + 1.5 and point.x > px - 1.5 and point.y < py + 1.5 and point.y > py - 1.5){
 	  in_out[i] = true;
 	}
 	else {
 	  in_out[i] = false;
 	}
-	
-	/*
-	int counter = 0;
-	
-	for (unsigned int j = 1; j < 20; j++){
-
-	  //create p1 and p2
-	  vec2 tail = player.player_vert[j];
-	  //std::cout << p1 << std::endl;
-	  vec2 head;
-	  if (j+1 >= 19){
-		head = player.player_vert[1];
-	  }
-	  else{
-		head = player.player_vert[j+1];
-	  }
-	  
-	  if (tail.y < head.y){
-		std::swap(head,tail);
-	  }
-	  //horizontal test
-	  if (tail.y-head.y ==0){
-		continue;
-	  }
-	  
-	  if (point.y < head.y and point.y < tail.y){
-		continue;
-	  }
-	  if (point.y > head.y and point.y > tail.y){
-		continue;
-	  }
-	  
-	  float cross_prod = ((tail.x - head.x) * (point.y - head.y)) - ((tail.y - head.y) * (point.x - head.x));
-	  //std::cout << "Cross Prod: " << cross_prod << std::endl;
-	  
-	  if (cross_prod > 0){
-		counter +=1;
-	  }
-	  //else{
-		//inside = false;
-		//break;
-	  //}
-	}
-	  
-	//std::cout << "End"<< std::endl;
-	if (counter % 2==0){
-	  inside = false;
-	}
-	
-	else{
-	  inside = true;
-	}
-  
-	in_out[i] = inside;
-	 */
   }
-	 
+
 }
 
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods){
+  if (button == GLFW_MOUSE_BUTTON_LEFT){
+	for (unsigned int i = 0; i < 6; i++){
+	  if (in_out[i] == true){
+		if(action == GLFW_PRESS){
+		  //std::cout << "charge" << std::endl;
+		}
+	  }
+	}
+    
+    if(action == GLFW_RELEASE){
+      //player->release()
+    }
+  }
+  
+}
 
 static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 {
@@ -175,9 +115,15 @@ void init(){
 
 //Call update function 30 times a second
 void animate(){
-  if(glfwGetTime() > 0.033){
+  if(glfwGetTime() > .033){
     glfwSetTime(0.0);
     ball->update_state();
+	player1->update_state();
+	player2->update_state();
+	player3->update_state();
+	player4->update_state();
+	player5->update_state();
+	player6->update_state();
   }
 }
 
@@ -205,7 +151,7 @@ int main(void)
   }
   
   glfwSetKeyCallback(window, key_callback);
-  
+  glfwSetMouseButtonCallback(window, mouse_button_callback);
   glfwSetCursorPosCallback(window, cursor_position_callback);
   
   glfwMakeContextCurrent(window);
@@ -230,6 +176,7 @@ int main(void)
   
   for (unsigned int i = 0; i < 6; i ++){
 	in_out.push_back(false);
+	launch.push_back(false);
   }
   
   while (!glfwWindowShouldClose(window)){
@@ -247,21 +194,47 @@ int main(void)
     glClear(GL_COLOR_BUFFER_BIT);
     
     ball->draw(proj);
-    player1->draw(proj);
-    player2->draw(proj);
-    player3->draw(proj);
-    player4->draw(proj);
-    player5->draw(proj);
-    player6->draw(proj);
+	for (unsigned int i = 0; i < 6; i++){
+	  players[i].draw(proj);
+	}
+    //player1->draw(proj);
+    //player2->draw(proj);
+    //player3->draw(proj);
+    //player4->draw(proj);
+    //player5->draw(proj);
+    //player6->draw(proj);
     
     glfwSwapBuffers(window);
     glfwPollEvents();
 	
 	for (unsigned int i = 0; i < 6; i ++){
-	  std::cout << i + 1 <<  ": " << in_out[i] << std::endl;
+	  Player player = players[i];
+	  int state = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
+	  if (state == GLFW_PRESS){
+		if (in_out[i] == true){
+		  player.charge();
+		  launch[i] = true;
+		  std::cout << "charge" << std::endl;
+		}
+	  }
+	  else if (state == GLFW_RELEASE and launch[i] == true){
+		double xpos, ypos;
+		glfwGetCursorPos(window, &xpos, &ypos);
+		xpos = xpos/width*40.0 - 20.0;
+		ypos = -(ypos/height*40.0 - 20.0);
+		vec2 vel = player.release(vec2(xpos, ypos));
+		players[i].state.velocity = vel;
+		launch[i] = false;
+		std::cout << "release" << std::endl;
+	  }
+	  players[i].update_state();
 	}
 	
-	std::cout << " " << std::endl;
+	for (unsigned int i = 0; i < 6; i ++){
+	  //std::cout<< i + 1 << ": " << in_out[i]<< std::endl;
+	  std::cout << i + 1 << ": " << players[i].state.velocity << ", " << players[i].state.cur_location << std::endl;
+	}
+
 	
     
   }

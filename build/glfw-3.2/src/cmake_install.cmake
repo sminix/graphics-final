@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src
+# Install script for directory: /Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/glfw-3.2/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

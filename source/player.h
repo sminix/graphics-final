@@ -29,6 +29,7 @@ public:
     vec2 cur_location;   //Current position of the center
     float angle;         //Rotation angle
     vec2 pointing;       //Vector pointing to the front of the ship
+	bool charging;
     //This function will be helpful to keep track of the direction the ship
     //is pointing
     mat2 RotateZ2D( const GLfloat theta ){
@@ -60,7 +61,10 @@ public:
   
 
   Player();
+  void charge();
   
+  vec2 release(vec2 cur_pos);
+	
   //inline void start_thruster(){ state.thruster_on= true;}
   //inline void stop_thruster() { state.thruster_on= false;}
   /*

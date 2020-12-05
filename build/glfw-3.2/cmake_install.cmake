@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2
+# Install script for directory: /Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/glfw-3.2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/cmake_install.cmake")
+  include("/Users/Sam/Desktop/intro-graphics/final-copy/graphics-final/build/glfw-3.2/src/cmake_install.cmake")
 
 endif()
 

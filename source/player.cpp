@@ -33,7 +33,6 @@ Player::Player(vec2 loc, char team){
   state.cur_location = loc;
   state.angle = 0;
   state.pointing = vec2(0.0,1.0);
-  //state.thruster_on = false;
   state.velocity = vec2(0.0, 0.0);
   state.acceleration = vec2(0.0, 0.0);
   state.team = team;
@@ -95,6 +94,75 @@ void Player::gl_init(){
   
   glBindVertexArray(0);
 
+}
+vec2 Player::release(vec2 cur_pos){
+	vec2 head = state.cur_location;
+	vec2 tail = cur_pos;
+	state.velocity = head - tail;
+	state.charging= false;
+	std::cout << state.velocity << std::endl;
+	for (unsigned int i = 0; i < 20; i++){
+	  player_vert[i] = player_vert[i] + (state.velocity * 0.33);
+	}
+  return state.velocity;
+  }
+void Player::charge(){ state.charging= true;} 
+
+void Player::update_state(){
+
+  state.velocity.x *= .98;
+  state.velocity.y *= .98;
+  
+   
+  //limit the velocity
+  //need to use pythagorean theorem here? What to set velocity to in this case?
+  //bc need x and y component
+  if (abs(state.velocity.x) > 10) {state.velocity.x = 10;}
+  if (abs(state.velocity.y) > 10) {state.velocity.y = 10;}
+  
+  //decrease velocity so that on change of direction, the original
+  //acceleration is still decreasing
+  //maybe dampen the velocity no matter what here???
+  //state.acceleration.x -= 1;
+  //state.acceleration.y -= 1;
+  
+  //update vertices so buffer can draw ship in new location
+  for (unsigned int i = 0; i < 20; i++){
+    player_vert[i].x = player_vert[i].x + (state.velocity.x * 0.033);
+    player_vert[i].y = player_vert[i].y +(state.velocity.y * 0.033);
+  }
+  
+  //update ship location
+  state.cur_location.x += state.velocity.x * 0.033;
+  state.cur_location.y += state.velocity.y * 0.033;
+  
+  //detecting if ship moves beyond boundaries and flipping ship to other side
+  if (state.cur_location.x > 19.5){
+	state.cur_location.x *= -1;
+	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
+	  player_vert[i].x -= 40;
+	}
+  }
+  
+  else if (state.cur_location.x < -19.5){
+	state.cur_location.x *= -1;
+	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
+	  player_vert[i].x += 40;
+	}
+  }
+  
+  if (state.cur_location.y > 19.5){
+	state.cur_location.y *= -1;
+	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
+	  player_vert[i].y -= 40;
+	}
+  }
+  else if (state.cur_location.y < -19.5){
+	state.cur_location.y *= -1;
+	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
+	  player_vert[i].y += 40;
+	}
+  }
 }
 
 void Player::draw(mat4 proj){
