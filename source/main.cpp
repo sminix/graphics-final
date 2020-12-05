@@ -12,7 +12,8 @@ Player *player5;
 Player *player6;
 
 std::vector < Player > players;
-
+unsigned int red_score;
+unsigned int blue_score;
 std::vector<bool> in_out;
 std::vector<bool> launch;
 
@@ -26,10 +27,6 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 {
   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     glfwSetWindowShouldClose(window, GLFW_TRUE);
-  if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    ball->rotateLeft();
-  if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT))
-    ball->rotateRight();
   
   if (key == GLFW_KEY_SPACE){
     if(action == GLFW_PRESS){
@@ -39,10 +36,17 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
       //ball->stop_thruster();
     }
   }
-   
-  if (key == GLFW_KEY_Z && action == GLFW_PRESS){
-    //!!!!!!!!Fire bullet
+}
+
+void score(char goal){
+  if (goal == 'r'){
+	red_score += 1;
   }
+  if (goal == 'b'){
+	blue_score += 1;
+  }
+  
+  std::cout << "Red: " << red_score << " Blue: " << blue_score << std::endl;
 }
 
 bool inside;
@@ -120,7 +124,7 @@ unsigned int collision(unsigned int i, Ball ball){
 	Player player2 = players[j];
 	
 	if ((abs(player1.state.cur_location.x - player2.state.cur_location.x) < 3.01) and (abs(player1.state.cur_location.y - player2.state.cur_location.y) < 3.01)){
-	  std::cout<< "here" << std::endl;
+	  //std::cout<< "here" << std::endl;
 	  return j;
 	}
   }
@@ -163,6 +167,8 @@ void animate(){
 
 int main(void)
 {
+  blue_score = 0;
+  red_score = 0;
   GLFWwindow* window;
   
   glfwSetErrorCallback(error_callback);
@@ -215,6 +221,13 @@ int main(void)
   
   while (!glfwWindowShouldClose(window)){
     
+	vec2 ball_loc = ball->get_loc();
+	if (ball_loc.y >18.1 and ball_loc.x < 5 and ball_loc.x > -5){
+	  score('r');
+	}
+	if (ball_loc.y < - 18.1 and ball_loc.x < 5 and ball_loc.x > -5){
+	  score('b');
+	}
     int width, height;
     glfwGetFramebufferSize(window, &width, &height);
     glViewport(0, 0, width, height);
@@ -234,7 +247,7 @@ int main(void)
     
 	for (unsigned int i = 0; i < 6; i++){
 	  unsigned int j = collision(i, *ball);
-	  std::cout << j <<std::endl;
+	  //std::cout << j <<std::endl;
 	  if (j != 100){
 		if (j == 10){
 		  vec2 vel = players[i].state.cur_location - ball->get_loc();
