@@ -11,6 +11,9 @@ Player *player4;
 Player *player5;
 Player *player6;
 
+Goal *rgoal;
+Goal *bgoal;
+
 std::vector < Player > players;
 unsigned int red_score;
 unsigned int blue_score;
@@ -38,7 +41,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
   }
 }
 
-void score(char goal){
+unsigned int score(char goal){
   if (goal == 'r'){
 	red_score += 1;
   }
@@ -47,6 +50,16 @@ void score(char goal){
   }
   
   std::cout << "Red: " << red_score << " Blue: " << blue_score << std::endl;
+  
+  if (red_score == 3){
+	std::cout <<"RED WINS!!!" << std::endl;
+	return 1;
+  }
+  if (blue_score == 3){
+	std::cout <<"BLUE WINS!!!" << std::endl;
+	return 1;
+  }
+  else return 0;
 }
 
 bool inside;
@@ -112,6 +125,8 @@ void init(){
   player4->gl_init();
   player5->gl_init();
   player6->gl_init();
+  rgoal->gl_init();
+  bgoal->gl_init();
   
 }
 
@@ -150,7 +165,36 @@ unsigned int collision(unsigned int i, Ball ball){
 	}
 	*/
 }
+void reset(mat4 proj){
+  
+  for (unsigned int i = 0; i < 6; i ++){
+	Player player = players[i];
+	players[i].state.velocity = vec2(0, 0);
+	if (i == 0){
+	  players[i].set_loc(vec2(-10,-10));
+	}
+	if (i == 1){
+	  players[i].set_loc(vec2(0,-10));
+	}
+	if (i == 2){
+	  players[i].set_loc(vec2(10,-10));
+	}
+	if (i == 3){
+	  players[i].set_loc(vec2(-10, 10));
+	}
+	if (i == 4){
+	  players[i].set_loc(vec2(0,10));
+	}
+	if (i == 5){
+	  players[i].set_loc(vec2(10,10));
+	}
+  }
 
+  for (unsigned int i = 0; i < 6; i++){
+	players[i].draw(proj);
+  }
+   
+}
 //Call update function 30 times a second
 void animate(){
   if(glfwGetTime() > 0.033){
@@ -169,6 +213,7 @@ int main(void)
 {
   blue_score = 0;
   red_score = 0;
+  std::cout << "Red: " << red_score << " Blue: " << blue_score << std::endl;
   GLFWwindow* window;
   
   glfwSetErrorCallback(error_callback);
@@ -204,7 +249,10 @@ int main(void)
   player4 = new Player(vec2(-10, 10), 'b');
   player5 = new Player(vec2(0, 10), 'b');
   player6 = new Player(vec2(10, 10), 'b');
+  rgoal = new Goal(vec2(0,-19));
+  bgoal = new Goal(vec2(0,19));
   ball = new Ball();
+  
   init();
   
   players.push_back(*player1);
@@ -218,15 +266,38 @@ int main(void)
 	in_out.push_back(false);
 	launch.push_back(false);
   }
-  
+  unsigned int over = 0;
   while (!glfwWindowShouldClose(window)){
+    animate();
+    mat4 proj = Ortho2D(-20.0, 20.0, -20.0, 20.0);
+    glClear(GL_COLOR_BUFFER_BIT);
     
+	rgoal->draw(proj);
+	bgoal->draw(proj);
+    ball->draw(proj);
+	for (unsigned int i = 0; i < 6; i++){
+	  players[i].draw(proj);
+	}
+	
 	vec2 ball_loc = ball->get_loc();
+	
 	if (ball_loc.y >18.1 and ball_loc.x < 5 and ball_loc.x > -5){
-	  score('r');
+	  //reset();
+	  ball->set_vel(vec2(0,0));
+	  ball->set_loc(vec2 (0,0));
+	  ball->draw(proj);
+	  reset(proj);
+	  over = score('r');
 	}
 	if (ball_loc.y < - 18.1 and ball_loc.x < 5 and ball_loc.x > -5){
-	  score('b');
+	  ball->set_vel(vec2(0,0));
+	  ball->set_loc(vec2 (0,0));
+	  ball->draw(proj);
+	  reset(proj);
+	  over = score('b');
+	}
+	if (over == 1){
+	  glfwSetWindowShouldClose(window, GLFW_TRUE);
 	}
     int width, height;
     glfwGetFramebufferSize(window, &width, &height);
@@ -234,20 +305,11 @@ int main(void)
     
     //Pick a coordinate system that makes the most sense to you
     //(left, right, top, bottom)
-    mat4 proj = Ortho2D(-20.0, 20.0, -20.0, 20.0);
-    
-    animate();
-    
-    glClear(GL_COLOR_BUFFER_BIT);
-    
-    ball->draw(proj);
-	for (unsigned int i = 0; i < 6; i++){
-	  players[i].draw(proj);
-	}
+    //mat4 proj = Ortho2D(-20.0, 20.0, -20.0, 20.0);
+
     
 	for (unsigned int i = 0; i < 6; i++){
 	  unsigned int j = collision(i, *ball);
-	  //std::cout << j <<std::endl;
 	  if (j != 100){
 		if (j == 10){
 		  vec2 vel = players[i].state.cur_location - ball->get_loc();
@@ -261,6 +323,7 @@ int main(void)
 		  players[j].state.velocity = vel / 2;
 		}
 	  }
+	  
 	}
     glfwSwapBuffers(window);
     glfwPollEvents();

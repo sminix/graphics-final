@@ -9,7 +9,6 @@
 #include "common.h"
 //#class player;
 
-
 Player::Player(vec2 loc, char team){
   //made player shape and color
   player_vert[0] = loc;
@@ -38,6 +37,13 @@ Player::Player(vec2 loc, char team){
   state.team = team;
 };
 
+void Player::set_loc(vec2 loc){
+  state.cur_location = loc;
+  player_vert[0] = loc;
+  for (unsigned int i = 0; i <= 18; i ++){
+	player_vert[i+1] = vec2(1.5*cos((20 * i)*(3.1415/180)) + loc.x, 1.5*sin((20 * i)*(3.1415/180)) + loc.y);
+  }
+}
 void Player::gl_init(){
   
   std::string vshader = shader_path + "vshader_Player.glsl";
@@ -100,7 +106,7 @@ vec2 Player::release(vec2 cur_pos){
 	vec2 tail = cur_pos;
 	state.velocity = head - tail;
 	state.charging= false;
-	std::cout << state.velocity << std::endl;
+	//std::cout << state.velocity << std::endl;
 	for (unsigned int i = 0; i < 20; i++){
 	  player_vert[i] = player_vert[i] + (state.velocity * 0.33);
 	}

@@ -37,6 +37,16 @@ vec2 Ball::get_loc(){
 void Ball::set_vel(vec2 vel){
   state.velocity = vel;
 }
+void Ball::set_loc(vec2 loc){
+  state.cur_location = loc;
+  ball_vert[0] = state.cur_location;
+  for (unsigned int i = 0; i <= 18; i ++){
+	ball_vert[i+1] = vec2(cos((20 * i)*(3.1415/180)), sin((20 * i)*(3.1415/180)));
+	if (i%2 == 0){
+	  ball_color[i+1] = vec3(1,1,1);
+	}
+  }
+}
 //Called everytime an animation tick happens
 void Ball::update_state(){
   

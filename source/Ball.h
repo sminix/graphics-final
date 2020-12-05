@@ -57,6 +57,7 @@ public:
   
   vec2 get_loc();
   void set_vel(vec2 vel);
+  void set_loc(vec2 loc);
   Ball();
   
   //inline void start_thruster(){ state.thruster_on= true;}

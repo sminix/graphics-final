@@ -63,6 +63,7 @@ public:
   Player();
   void charge();
   vec2 release(vec2 cur_pos);
+  void set_loc(vec2 loc);
 	
   //inline void start_thruster(){ state.thruster_on= true;}
   //inline void stop_thruster() { state.thruster_on= false;}

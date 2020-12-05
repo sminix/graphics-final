@@ -9,4 +9,5 @@ dependencies: \
   /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/mat.h \
   /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/shader.h \
   /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.h \
-  /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.h
+  /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.h \
+  /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.hpp

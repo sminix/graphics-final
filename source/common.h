@@ -23,7 +23,7 @@ using namespace Angel;
 #include "shader.h"
 #include "Ball.h"
 #include "player.h"
-
+#include "Goal.hpp"
 
 
 #endif
