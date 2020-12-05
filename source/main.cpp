@@ -111,11 +111,41 @@ void init(){
   
 }
 
-
+unsigned int collision(unsigned int i){
+  Player player1 = players[i];
+  for (unsigned int j = 0; j < 6 ; j++){
+	if (i == j){
+	  continue;
+	}
+	Player player2 = players[j];
+	
+	if ((abs(player1.state.cur_location.x - player2.state.cur_location.x) < 3.1) and (abs(player1.state.cur_location.y - player2.state.cur_location.y) < 3.1)){
+	  std::cout<< "here" << std::endl;
+	  return j;
+	}
+  }
+  
+  return 100;
+	/*
+	
+	for (unsigned int m = 1; m < 19; m++){
+	  for (unsigned int n = 1; n < 19; n++){
+		std::cout << player1->player_vert[m] << std::endl;
+		if (abs(player1->player_vert[m].x - player2->player_vert[n].x) < .01 and abs(player1->player_vert[m].y - player2->player_vert[n].y) < .01){
+		  std::cout << "here" << std::endl;
+		  player1->state.velocity = player1->player_vert[m] - player1->state.cur_location;
+		  //player1.update_state();
+		  player2->state.velocity = player2->player_vert[n] - player2->state.cur_location;
+		  //player2.update_state();
+		}
+	  }
+	}
+	*/
+}
 
 //Call update function 30 times a second
 void animate(){
-  if(glfwGetTime() > .033){
+  if(glfwGetTime() > 0.033){
     glfwSetTime(0.0);
     ball->update_state();
 	player1->update_state();
@@ -197,24 +227,29 @@ int main(void)
 	for (unsigned int i = 0; i < 6; i++){
 	  players[i].draw(proj);
 	}
-    //player1->draw(proj);
-    //player2->draw(proj);
-    //player3->draw(proj);
-    //player4->draw(proj);
-    //player5->draw(proj);
-    //player6->draw(proj);
     
+	for (unsigned int i = 0; i < 6; i++){
+	  unsigned int j = collision(i);
+	  std::cout << j <<std::endl;
+	  if (j != 100){
+		vec2 vel = players[j].state.cur_location - players[i].state.cur_location;
+		players[i].state.velocity = -vel / 2;
+		players[j].state.velocity = vel / 2;
+		
+	  }
+	}
     glfwSwapBuffers(window);
     glfwPollEvents();
 	
 	for (unsigned int i = 0; i < 6; i ++){
 	  Player player = players[i];
+	  
+	  
 	  int state = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
 	  if (state == GLFW_PRESS){
 		if (in_out[i] == true){
 		  player.charge();
 		  launch[i] = true;
-		  std::cout << "charge" << std::endl;
 		}
 	  }
 	  else if (state == GLFW_RELEASE and launch[i] == true){
@@ -225,17 +260,14 @@ int main(void)
 		vec2 vel = player.release(vec2(xpos, ypos));
 		players[i].state.velocity = vel;
 		launch[i] = false;
-		std::cout << "release" << std::endl;
 	  }
+	  
+	  
 	  players[i].update_state();
-	}
-	
-	for (unsigned int i = 0; i < 6; i ++){
-	  //std::cout<< i + 1 << ": " << in_out[i]<< std::endl;
-	  std::cout << i + 1 << ": " << players[i].state.velocity << ", " << players[i].state.cur_location << std::endl;
-	}
+	  
 
-	
+
+	}
     
   }
   

@@ -106,7 +106,8 @@ vec2 Player::release(vec2 cur_pos){
 	}
   return state.velocity;
   }
-void Player::charge(){ state.charging= true;} 
+void Player::charge(){ state.charging= true;}
+
 
 void Player::update_state(){
 
@@ -119,6 +120,11 @@ void Player::update_state(){
   //bc need x and y component
   if (abs(state.velocity.x) > 10) {state.velocity.x = 10;}
   if (abs(state.velocity.y) > 10) {state.velocity.y = 10;}
+  
+  if (abs(state.velocity.x) < .001 and abs(state.velocity.y) < .001){
+	state.velocity.x = 0;
+	state.velocity.y = 0;
+  }
   
   //decrease velocity so that on change of direction, the original
   //acceleration is still decreasing
@@ -137,31 +143,13 @@ void Player::update_state(){
   state.cur_location.y += state.velocity.y * 0.033;
   
   //detecting if ship moves beyond boundaries and flipping ship to other side
-  if (state.cur_location.x > 19.5){
-	state.cur_location.x *= -1;
-	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
-	  player_vert[i].x -= 40;
-	}
+  if (state.cur_location.x > 18 or state.cur_location.x < -18){
+	state.velocity.x *= -1;
   }
   
-  else if (state.cur_location.x < -19.5){
-	state.cur_location.x *= -1;
-	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
-	  player_vert[i].x += 40;
-	}
-  }
   
-  if (state.cur_location.y > 19.5){
-	state.cur_location.y *= -1;
-	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
-	  player_vert[i].y -= 40;
-	}
-  }
-  else if (state.cur_location.y < -19.5){
-	state.cur_location.y *= -1;
-	for (int i = 0; i < sizeof(player_vert)/sizeof(player_vert[0]); i++){
-	  player_vert[i].y += 40;
-	}
+  if (state.cur_location.y > 18 or state.cur_location.y < -18){
+	state.velocity.y *= -1;
   }
 }
 

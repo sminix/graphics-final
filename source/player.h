@@ -62,7 +62,6 @@ public:
 
   Player();
   void charge();
-  
   vec2 release(vec2 cur_pos);
 	
   //inline void start_thruster(){ state.thruster_on= true;}

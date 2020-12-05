@@ -24,12 +24,12 @@ Ball::Ball(){
   }
 
   
-  state.cur_location = (0.0,0.0);
+  state.cur_location = vec2(0.0,0.0);
   state.angle = 0;
-  state.pointing = (0.0,1.0);
+  state.pointing = vec2(0.0,1.0);
   //state.thruster_on = false;
-  state.velocity = (0.0, 0.0);
-  state.acceleration = (0.0, 0.0);
+  state.velocity = vec2(0.0, 0.0);
+  state.acceleration = vec2(0.0, 0.0);
 };
 
 //Called everytime an animation tick happens
