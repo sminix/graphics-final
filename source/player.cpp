@@ -121,7 +121,7 @@ void Player::update_state(){
   if (abs(state.velocity.x) > 10) {state.velocity.x = 10;}
   if (abs(state.velocity.y) > 10) {state.velocity.y = 10;}
   
-  if (abs(state.velocity.x) < .001 and abs(state.velocity.y) < .001){
+  if (abs(state.velocity.x) < .1 and abs(state.velocity.y) < .1){
 	state.velocity.x = 0;
 	state.velocity.y = 0;
   }

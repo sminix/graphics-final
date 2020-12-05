@@ -111,7 +111,7 @@ void init(){
   
 }
 
-unsigned int collision(unsigned int i){
+unsigned int collision(unsigned int i, Ball ball){
   Player player1 = players[i];
   for (unsigned int j = 0; j < 6 ; j++){
 	if (i == j){
@@ -119,10 +119,14 @@ unsigned int collision(unsigned int i){
 	}
 	Player player2 = players[j];
 	
-	if ((abs(player1.state.cur_location.x - player2.state.cur_location.x) < 3.1) and (abs(player1.state.cur_location.y - player2.state.cur_location.y) < 3.1)){
+	if ((abs(player1.state.cur_location.x - player2.state.cur_location.x) < 3.01) and (abs(player1.state.cur_location.y - player2.state.cur_location.y) < 3.01)){
 	  std::cout<< "here" << std::endl;
 	  return j;
 	}
+  }
+  
+  if ((abs(player1.state.cur_location.x - ball.get_loc().x) < 2.51) and (abs(player1.state.cur_location.y - ball.get_loc().y) < 2.51)){
+	return 10;
   }
   
   return 100;
@@ -229,13 +233,20 @@ int main(void)
 	}
     
 	for (unsigned int i = 0; i < 6; i++){
-	  unsigned int j = collision(i);
+	  unsigned int j = collision(i, *ball);
 	  std::cout << j <<std::endl;
 	  if (j != 100){
-		vec2 vel = players[j].state.cur_location - players[i].state.cur_location;
-		players[i].state.velocity = -vel / 2;
-		players[j].state.velocity = vel / 2;
-		
+		if (j == 10){
+		  vec2 vel = players[i].state.cur_location - ball->get_loc();
+		  ball->set_vel(-2 * vel);
+		  players[i].state.velocity = vel/2;
+		  
+		}
+		else{
+		  vec2 vel = players[j].state.cur_location - players[i].state.cur_location;
+		  players[i].state.velocity = -vel / 2;
+		  players[j].state.velocity = vel / 2;
+		}
 	  }
 	}
     glfwSwapBuffers(window);

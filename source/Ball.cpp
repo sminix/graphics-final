@@ -31,7 +31,12 @@ Ball::Ball(){
   state.velocity = vec2(0.0, 0.0);
   state.acceleration = vec2(0.0, 0.0);
 };
-
+vec2 Ball::get_loc(){
+  return state.cur_location;
+}
+void Ball::set_vel(vec2 vel){
+  state.velocity = vel;
+}
 //Called everytime an animation tick happens
 void Ball::update_state(){
   
@@ -44,9 +49,13 @@ void Ball::update_state(){
   //limit the velocity
   //need to use pythagorean theorem here? What to set velocity to in this case?
   //bc need x and y component
-  if (state.velocity.x > _MAX_SPEED) {state.velocity.x = _MAX_SPEED;}
-  if (state.velocity.y > _MAX_SPEED) {state.velocity.y = _MAX_SPEED;}
+  if (abs(state.velocity.x) > 10) {state.velocity.x = 10;}
+  if (abs(state.velocity.y) > 10) {state.velocity.y = 10;}
   
+  if (abs(state.velocity.x) < .1 and abs(state.velocity.y) < .1){
+	state.velocity.x = 0;
+	state.velocity.y = 0;
+  }
   //decrease velocity so that on change of direction, the original
   //acceleration is still decreasing
   //maybe dampen the velocity no matter what here???
@@ -64,31 +73,13 @@ void Ball::update_state(){
   state.cur_location.y += state.velocity.y * 0.033;
   
   //detecting if ship moves beyond boundaries and flipping ship to other side
-  if (state.cur_location.x > 19.5){
-	state.cur_location.x *= -1;
-	for (int i = 0; i < sizeof(ball_vert)/sizeof(ball_vert[0]); i++){
-	  ball_vert[i].x -= 40;
-	}
+  if (state.cur_location.x > 18.5 or state.cur_location.x < -18.5){
+	state.velocity.x *= -1;
   }
   
-  else if (state.cur_location.x < -19.5){
-	state.cur_location.x *= -1;
-	for (int i = 0; i < sizeof(ball_vert)/sizeof(ball_vert[0]); i++){
-	  ball_vert[i].x += 40;
-	}
-  }
   
-  if (state.cur_location.y > 19.5){
-	state.cur_location.y *= -1;
-	for (int i = 0; i < sizeof(ball_vert)/sizeof(ball_vert[0]); i++){
-	  ball_vert[i].y -= 40;
-	}
-  }
-  else if (state.cur_location.y < -19.5){
-	state.cur_location.y *= -1;
-	for (int i = 0; i < sizeof(ball_vert)/sizeof(ball_vert[0]); i++){
-	  ball_vert[i].y += 40;
-	}
+  if (state.cur_location.y > 18.5 or state.cur_location.y < -18.5){
+	state.velocity.y *= -1;
   }
   
   // Things to do:
