@@ -51,28 +51,14 @@ void Ball::set_loc(vec2 loc){
 }
 //Called everytime an animation tick happens
 void Ball::update_state(){
-  
-	state.acceleration.x = 0;
-	state.acceleration.y = 0;
 	state.velocity.x *= _DAMPING;
 	state.velocity.y *= _DAMPING;
-  
-   
-  //limit the velocity
-  //need to use pythagorean theorem here? What to set velocity to in this case?
-  //bc need x and y component
-  if (abs(state.velocity.x) > 10) {state.velocity.x = 10;}
-  if (abs(state.velocity.y) > 10) {state.velocity.y = 10;}
-  
+
   if (abs(state.velocity.x) < .1 and abs(state.velocity.y) < .1){
 	state.velocity.x = 0;
 	state.velocity.y = 0;
   }
-  //decrease velocity so that on change of direction, the original
-  //acceleration is still decreasing
-  //maybe dampen the velocity no matter what here???
-  //state.acceleration.x -= 1;
-  //state.acceleration.y -= 1;
+
   
   //update vertices so buffer can draw ship in new location
   for (unsigned int i = 0; i < sizeof(ball_vert)/sizeof(ball_vert[0]); i++){
@@ -84,7 +70,7 @@ void Ball::update_state(){
   state.cur_location.x += state.velocity.x * 0.033;
   state.cur_location.y += state.velocity.y * 0.033;
   
-  //detecting if ship moves beyond boundaries and flipping ship to other side
+  //detecting if ball moves beyond boundaries and reverse
   if (state.cur_location.x > 18.5 or state.cur_location.x < -18.5){
 	state.velocity.x *= -1;
   }
@@ -93,18 +79,6 @@ void Ball::update_state(){
   if (state.cur_location.y > 18.5 or state.cur_location.y < -18.5){
 	state.velocity.y *= -1;
   }
-  
-  // Things to do:
-  //a = F
-  //Force is in the direction the ship is pointing
-  //Clamp acceleration at some maximum value
-  
-  //v  = old_velocity + a*dt
-  // clamp velocity at a maximum value
-  // Dampen the velocity at every timestep to lessen intertia
-
-  //p  = old_position + v*dt
-  // Wrap the ship position when at the boundary
 
 }
 
