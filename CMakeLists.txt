@@ -35,6 +35,10 @@ add_executable(soccer WIN32 MACOSX_BUNDLE
 	source/main.cpp
 	source/Ball.cpp
 	source/Ball.h
+	source/Arrow.cpp
+	source/Arrow.hpp
+	source/Goal.cpp
+	source/Goal.hpp
   source/player.cpp
   source/player.h
 	shaders/fshader_Ship.glsl

@@ -56,6 +56,7 @@ class Ball{
 public:
   
   vec2 get_loc();
+  vec2 get_vel();
   void set_vel(vec2 vel);
   void set_loc(vec2 loc);
   Ball();

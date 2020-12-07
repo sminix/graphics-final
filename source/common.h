@@ -24,6 +24,7 @@ using namespace Angel;
 #include "Ball.h"
 #include "player.h"
 #include "Goal.hpp"
+#include "Arrow.hpp"
 
 
 #endif

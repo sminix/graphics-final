@@ -27,12 +27,14 @@ Ball::Ball(){
   state.cur_location = vec2(0.0,0.0);
   state.angle = 0;
   state.pointing = vec2(0.0,1.0);
-  //state.thruster_on = false;
   state.velocity = vec2(0.0, 0.0);
   state.acceleration = vec2(0.0, 0.0);
 };
 vec2 Ball::get_loc(){
   return state.cur_location;
+}
+vec2 Ball::get_vel(){
+  return state.velocity;
 }
 void Ball::set_vel(vec2 vel){
   state.velocity = vel;

@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		62ED0E4967B646A59E7A7C52 /* ZERO_CHECK */ = {
+		624C47BC47344E239D84F5EB /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 14824806778E4ED186F457F4 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = A4A2A05F316A41128C170A03 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				E2AC91A9C1B043288B5D5E88 /* CMake Rules */,
+				C720FCCE000A47F680F912B0 /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		70AB2B91FE7E47F287B6E9E3 /* ALL_BUILD */ = {
+		C7DBE97C0FDC44BF8F212E4A /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 2711300D2FC8431496F6CA1F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 492FFBFA1B37437BB4284690 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				C52B1563E4CF4B1399B6059C /* CMake Rules */,
+				55E3774B08CC47CB98C94EB6 /* CMake Rules */,
 			);
 			dependencies = (
-				46CC288846B84B43B7DFAF15 /* PBXTargetDependency */,
-				B971CCDDD9174B2FBDBB6BB6 /* PBXTargetDependency */,
-				7EE652D3BADC4BCCB83E0D14 /* PBXTargetDependency */,
-				89F9EE0188084AB393C87696 /* PBXTargetDependency */,
+				B9C17851E1F14E2FA46F0B3E /* PBXTargetDependency */,
+				65E265B62B10465CA43FD519 /* PBXTargetDependency */,
+				5A257D47ED86491C91A296B2 /* PBXTargetDependency */,
+				EEC6720EF82745CF82A9A9FF /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -36,403 +36,484 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0C95BBF80AA6439382AC889A /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 84A7144FC9DF4E06BA85DDAD /* init.c */; };
-		224EE1FE257BEE0F00A9A7EA /* Goal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224EE1FB257BEE0400A9A7EA /* Goal.cpp */; };
-		24B2979CEDEF4378B38E7CF7 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 63068D263A564B5FA7BBB109 /* window.c */; };
-		4204CD360F7C449F95315C78 /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E27CDDC58D5E4340829BD86A /* Ball.cpp */; };
-		46620C0E80FD4921BBC1B33F /* nsgl_context.m in Sources */ = {isa = PBXBuildFile; fileRef = EF23F5EBB8FD431982C24FEA /* nsgl_context.m */; };
-		4B13F6A32B1A41D4954AFBC3 /* cocoa_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 7397C20C07DA4E30967235C6 /* cocoa_time.c */; };
-		62581EC7201A427D9B416246 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B870B72023F4466B979912B /* glad.c */; };
-		6676B4A143FB467E8F36024F /* cocoa_window.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2E0CC9CDD34ADA969FCFD0 /* cocoa_window.m */; };
-		74C211BFC929468A8AA87BF4 /* cocoa_joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 24562E0F9C2A4C85961114E2 /* cocoa_joystick.m */; };
-		8332E2CAFABC4D4181B8DA6D /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5824FC0BE60648BCB68454BB /* shader.cpp */; };
-		9D60E7E577F7407DA3D98219 /* context.c in Sources */ = {isa = PBXBuildFile; fileRef = 4427CEDEAAF74B42BB610CAF /* context.c */; };
-		A4775F8CDC394A1BA006507D /* posix_tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 031DA9549CC84CC5BF04786A /* posix_tls.c */; };
-		B8B62312DE9941C7BA423F33 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0142CF9DA85740A48F5CB6AE /* player.cpp */; };
-		C94ED6F602004095BF52AF99 /* cocoa_monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 33731AD046E94AA79E26A69D /* cocoa_monitor.m */; };
-		CE6BC2607A124FEEA33A1522 /* cocoa_init.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E726EBD7394D0CBE707E17 /* cocoa_init.m */; };
-		D903C49C0C1748C88E6E2A5E /* vulkan.c in Sources */ = {isa = PBXBuildFile; fileRef = 412E56FD734B4529BC1380AE /* vulkan.c */; };
-		EECFFDEE84C14C4BBE4E952B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B350140CB43CBA0BE0A97 /* main.cpp */; };
-		EF4D50C72943499EA5DA910B /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E4925562D4D48C1AA14BB3E /* input.c */; };
-		FC9B07403C0F4D2493B94BDA /* monitor.c in Sources */ = {isa = PBXBuildFile; fileRef = A9626E2C263D41A1A938E541 /* monitor.c */; };
+		0FB1792513334C20A14E17A8 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/common.h */ = {isa = PBXBuildFile; fileRef = EB583D343D92403C902F3376 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/common.h */; };
+		108685D9FCEC416BA8A85343 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 57C2A8DEAAAC436D9138D95F /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_init.m */; };
+		1114D1C395A041B192401FBD /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/internal.h */ = {isa = PBXBuildFile; fileRef = 186E05CDD81D4496979CB80D /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/internal.h */; };
+		128DF4ECD7D744DDAE184B23 /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 32A28D9238E84F18B6713AED /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */; };
+		12D9CFA0DB254FF3B59BFD1B /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Ship.glsl */ = {isa = PBXBuildFile; fileRef = C68CD4CC2B124B3C938A1B44 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Ship.glsl */; };
+		13C9EAEF37C148FD9F18362F /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad/glad.h */ = {isa = PBXBuildFile; fileRef = A5A5322B8CFD4433A4BA590A /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad/glad.h */; };
+		152179D8968B48D79A99829D /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 1A1ABE5334B54F3B83D82FEA /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_monitor.m */; };
+		16D969C2704E4C77AB131399 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.cpp */ = {isa = PBXBuildFile; fileRef = 6C341F510D4C4D6FAA6C2C94 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.cpp */; };
+		211516D26521420BB54498E0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/input.c */ = {isa = PBXBuildFile; fileRef = BB249157528E4364AE5C6C49 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/input.c */; };
+		255FC32497514CFD9209959D /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.hpp */ = {isa = PBXBuildFile; fileRef = F89F1468C69C408E9FBF5D46 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.hpp */; };
+		2784015684C345C0A150438C /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad.c */ = {isa = PBXBuildFile; fileRef = 7810DFB5F8C341488EB3748C /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad.c */; };
+		2D460AD9F0A948C99C845A3A /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = 1E4A2101CF964CF4B2CDCD61 /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist */; };
+		3103246C11BC453EA7BFB00A /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 9EFF24188B024D13BF489359 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.h */; };
+		31FBA681166B450FB219F2A2 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/mat.h */ = {isa = PBXBuildFile; fileRef = 65EF73E8A22B4E7689DFB0CD /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/mat.h */; };
+		365FC3B03B4B4D84AEE30630 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/CheckError.h */ = {isa = PBXBuildFile; fileRef = D71A3D8933E8465B94D30528 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/CheckError.h */; };
+		39EBF6C569134FB6958FE506 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Ship.glsl */ = {isa = PBXBuildFile; fileRef = 9CEEB223C76241C8A5FE79B6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Ship.glsl */; };
+		3A3B696E489E4A3C8F9EE6F8 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.cpp */ = {isa = PBXBuildFile; fileRef = 915EBB54657147BCA52E311D /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.cpp */; };
+		4334F48E62EF4832A2A7934E /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Player.glsl */ = {isa = PBXBuildFile; fileRef = DE8C7FA1E4B74355AB74CC0B /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Player.glsl */; };
+		5CCDE958141A429AAFCFADEC /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.hpp */ = {isa = PBXBuildFile; fileRef = D237A7DBF71549BF83CCD32A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.hpp */; };
+		6106E6C1E9A34DD2B7F786A6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.h */ = {isa = PBXBuildFile; fileRef = 7FA348B435F84BA182BB9FCC /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.h */; };
+		65E9021DDDF34ACBA140BE43 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = DC2652F70D7A42828B7BDD87 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.m */; };
+		7024DF9006D14E138BD43F15 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = D6C80C7ED36B4C1080ED8572 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3native.h */; };
+		72930C33330B4FF39450D5A6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/shader.cpp */ = {isa = PBXBuildFile; fileRef = 3271625032E74B85937C0433 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/shader.cpp */; };
+		798844ED1203467D9E48C645 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.cpp */ = {isa = PBXBuildFile; fileRef = 20AA23952DEC44C59EFBF522 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.cpp */; };
+		7CE36FA9759E454BA5033C19 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 7763B9E1AA1F4686A5365CAF /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_platform.h */; };
+		80AAB193304A4E39A9FE211A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/vec.h */ = {isa = PBXBuildFile; fileRef = 5807D8AE89FB4E2CA73329DF /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/vec.h */; };
+		84D42386DF6C448490B33674 /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 3EADAFB3E1514A99BA3B5A2A /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */; };
+		86B297BFCA364D8DA2243A7A /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 5F6BE25B63E24AF89B061B29 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3.h */; };
+		87AC2433693B474FB0AD52CB /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = C5F5CD4751F544E19D5E4279 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.c */; };
+		8BEDCD6B7CBD4B3E93F6C623 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 3A2E05461D984164A35918F7 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/CMakeLists.txt */; };
+		92E7C86993C84538A8811087 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/init.c */ = {isa = PBXBuildFile; fileRef = 4694C80798C544058B916DE3 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/init.c */; };
+		B248ECB67959423B850397DB /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/window.c */ = {isa = PBXBuildFile; fileRef = B3B7425D39EA418B8D6A9C51 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/window.c */; };
+		B5C41526071B4ABB94A5AF60 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.cpp */ = {isa = PBXBuildFile; fileRef = 43B0177E11664A3DBAE18F9D /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.cpp */; };
+		BB9D2EA732154078992D1420 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = B56B044E606F4D6A91D687E0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.m */; };
+		BF30C16502934F078C710C0A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/main.cpp */ = {isa = PBXBuildFile; fileRef = 70A6407109E44EB1ABA224FB /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/main.cpp */; };
+		C0C09A16F3824149BA911528 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 0E44FA4F525D44B096083597 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.h */; };
+		C17BAAA4EE0E4C279992FD72 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = E686CD0400F54E11AC52FD38 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.h */; };
+		C9096E94B4B641BF89B13C20 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 7628C6783B0B4A5595DF9960 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_window.m */; };
+		DC3EC712AFD94E87A714BCCE /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.h */ = {isa = PBXBuildFile; fileRef = B6DC6D5E0EFD45F8A7CDDF1A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.h */; };
+		DF9DEE9E2CB9411D9D2AE2E3 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Player.glsl */ = {isa = PBXBuildFile; fileRef = B34C85BB96BF4AE0B2DEF8C3 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Player.glsl */; };
+		E73864F018D24BA3B3BE1BD5 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 0FCE54E68382408287523423 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/vulkan.c */; };
+		EAA8E16F34734B0EBF374C63 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = FCD1B5429C0E4C51A83C1254 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_time.c */; };
+		EB076DD380144AC6BA822CCD /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/Angel.h */ = {isa = PBXBuildFile; fileRef = A039EC70949E4355A7D5E436 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/Angel.h */; };
+		ED516DFC110E4E8ABFED3CB2 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/context.c */ = {isa = PBXBuildFile; fileRef = 63B440C7BE3D4C5981A6A930 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/context.c */; };
+		F5429B6ABC5D483AB6368909 /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 16CCBAEC7B2B40149EB97EB6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/glfw_config.h */; };
+		F567AA23A02B4A759B888365 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/monitor.c */ = {isa = PBXBuildFile; fileRef = B1EEE4BD1DC8474DB5DD52F0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/monitor.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildStyle section */
+		3E4BF0798EA54866AE7CDDFC /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		51B55E1F9C89437A9D8C2046 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		A1FCD13EFD364389B322A0C1 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		C2969EDE655844C7B4AB6356 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
 /* Begin PBXContainerItemProxy section */
-		1844B103B1AA476AA884868D /* PBXContainerItemProxy */ = {
+		382622F890FC4B49AC6328DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C84B745AB08F4B399A1A4196;
-			remoteInfo = glfw;
+			remoteGlobalIDString = 38C482E0FED14C4AA1712C77;
+			remoteInfo = glad;
 		};
-		4E683EA6D01341C2B05D0CA2 /* PBXContainerItemProxy */ = {
+		5D2E2B3AF4DB4A5C8242625F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C84B745AB08F4B399A1A4196;
-			remoteInfo = glfw;
+			remoteGlobalIDString = 624C47BC47344E239D84F5EB;
+			remoteInfo = ZERO_CHECK;
 		};
-		4F845F37C3474394850002A0 /* PBXContainerItemProxy */ = {
+		9AE443E56FD2414CAF3D3656 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EDD722BFFFE140E18369FEA8;
+			remoteGlobalIDString = E4E84312AD1B482B88A85555;
 			remoteInfo = soccer;
 		};
-		8BE127C5E2004BF0AA1048B8 /* PBXContainerItemProxy */ = {
+		AECEE1E66D6B4B7A85844CC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 62ED0E4967B646A59E7A7C52;
-			remoteInfo = ZERO_CHECK;
-		};
-		AF566A5FC2FC40958584BEAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 62ED0E4967B646A59E7A7C52;
-			remoteInfo = ZERO_CHECK;
-		};
-		B819ECDCA6404566B752E157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 62ED0E4967B646A59E7A7C52;
-			remoteInfo = ZERO_CHECK;
-		};
-		B90B5A0FC74D43AF8DBD97C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCC9F501747A4114839D021E;
+			remoteGlobalIDString = 38C482E0FED14C4AA1712C77;
 			remoteInfo = glad;
 		};
-		E2F8B48AD6754F0E8E3108A8 /* PBXContainerItemProxy */ = {
+		B11BE2AF089D4FAD8BE8875C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C84B745AB08F4B399A1A4196;
+			remoteGlobalIDString = 624C47BC47344E239D84F5EB;
+			remoteInfo = ZERO_CHECK;
+		};
+		B5E163F4CC6E46CF8A4BF3A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 624C47BC47344E239D84F5EB;
+			remoteInfo = ZERO_CHECK;
+		};
+		C7CF31A90D9C455EBF7BE128 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 624C47BC47344E239D84F5EB;
+			remoteInfo = ZERO_CHECK;
+		};
+		CB009DC8B48F418099D18A40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A9776B2E15742AD82ABB7B3;
 			remoteInfo = glfw;
 		};
-		EF6D3C0D95A547AE954DA68B /* PBXContainerItemProxy */ = {
+		EB88AF8A7D6D4962A169EEBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 62ED0E4967B646A59E7A7C52;
-			remoteInfo = ZERO_CHECK;
+			remoteGlobalIDString = 1A9776B2E15742AD82ABB7B3;
+			remoteInfo = glfw;
 		};
-		F5FCE0CE51FB4DAC8CCF107E /* PBXContainerItemProxy */ = {
+		F68031E1A0FB4166B2B809E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EBCA67E003314431A3B76DC9 /* Project object */;
+			containerPortal = 8C3AAA93243C460E8203530E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FCC9F501747A4114839D021E;
-			remoteInfo = glad;
+			remoteGlobalIDString = 1A9776B2E15742AD82ABB7B3;
+			remoteInfo = glfw;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0142CF9DA85740A48F5CB6AE /* player.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = player.cpp; path = source/player.cpp; sourceTree = SOURCE_ROOT; };
-		031DA9549CC84CC5BF04786A /* posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = "glfw-3.2/src/posix_tls.c"; sourceTree = SOURCE_ROOT; };
-		0B870B72023F4466B979912B /* glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = "glfw-3.2/deps/glad.c"; sourceTree = SOURCE_ROOT; };
-		152DBF8CA0C84065A79A919F /* cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = "glfw-3.2/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
-		224EE1FB257BEE0400A9A7EA /* Goal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Goal.cpp; path = source/Goal.cpp; sourceTree = "<group>"; };
-		224EE1FC257BEE0400A9A7EA /* Goal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Goal.hpp; path = source/Goal.hpp; sourceTree = "<group>"; };
-		2329D89D0F0C4CAEA0AA40FD /* player.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = player.h; path = source/player.h; sourceTree = SOURCE_ROOT; };
-		24562E0F9C2A4C85961114E2 /* cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = "glfw-3.2/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
-		2A2E11E7CAAD4E5C9F425665 /* glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = "glfw-3.2/deps/glad/glad.h"; sourceTree = SOURCE_ROOT; };
-		3038FB8CA2E8454AA6EE5751 /* libglad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		33731AD046E94AA79E26A69D /* cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = "glfw-3.2/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
-		3602C49E5D1749B0989CAFEB /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = build/CMakeFiles/soccer.dir/Info.plist; sourceTree = SOURCE_ROOT; };
-		3E408492D10C4F008C895485 /* Angel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Angel.h; path = source/utils/Angel.h; sourceTree = SOURCE_ROOT; };
-		412E56FD734B4529BC1380AE /* vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = "glfw-3.2/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
-		4427CEDEAAF74B42BB610CAF /* context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = "glfw-3.2/src/context.c"; sourceTree = SOURCE_ROOT; };
-		521AB4F4E0B94C12959A6979 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = "glfw-3.2/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-		55D98636DD3E49E094F23B18 /* fshader_Ship.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = fshader_Ship.glsl; path = shaders/fshader_Ship.glsl; sourceTree = SOURCE_ROOT; };
-		5824FC0BE60648BCB68454BB /* shader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = shader.cpp; path = shaders/shader.cpp; sourceTree = SOURCE_ROOT; };
-		58EDE9D3B75049F29A462856 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		59BAFF58D2AC47478FE7DD27 /* vec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vec.h; path = source/utils/vec.h; sourceTree = SOURCE_ROOT; };
-		5E4925562D4D48C1AA14BB3E /* input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = "glfw-3.2/src/input.c"; sourceTree = SOURCE_ROOT; };
-		63068D263A564B5FA7BBB109 /* window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = "glfw-3.2/src/window.c"; sourceTree = SOURCE_ROOT; };
-		657B5B056B1142D69D7930BE /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		70F532011AC34835B6D08F83 /* Ball.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Ball.h; path = source/Ball.h; sourceTree = SOURCE_ROOT; };
-		715E8CB25AA84620ADC2B51C /* glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "build/glfw-3.2/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
-		7397C20C07DA4E30967235C6 /* cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = "glfw-3.2/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
-		84A7144FC9DF4E06BA85DDAD /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = "glfw-3.2/src/init.c"; sourceTree = SOURCE_ROOT; };
-		8804B6789AD448B49EBFB8A8 /* mat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mat.h; path = source/utils/mat.h; sourceTree = SOURCE_ROOT; };
-		8B62CAE37D784ACF88D0B8A3 /* libglfw3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D7B350140CB43CBA0BE0A97 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = source/main.cpp; sourceTree = SOURCE_ROOT; };
-		9315D6D21A7040E4AEF2598E /* vshader_Player.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = vshader_Player.glsl; path = shaders/vshader_Player.glsl; sourceTree = SOURCE_ROOT; };
-		995305B004AA4AB6AC0561B4 /* glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = "glfw-3.2/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
-		9ED3DBB796954253A84784A4 /* CheckError.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CheckError.h; path = source/utils/CheckError.h; sourceTree = SOURCE_ROOT; };
-		9F345DB9D95545DBADE1F5C9 /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = "glfw-3.2/src/internal.h"; sourceTree = SOURCE_ROOT; };
-		A9626E2C263D41A1A938E541 /* monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = "glfw-3.2/src/monitor.c"; sourceTree = SOURCE_ROOT; };
-		B10FF4501B7245609C6855CD /* common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = common.h; path = source/common.h; sourceTree = SOURCE_ROOT; };
-		C1F6FF8652154B3ABE4E8334 /* vshader_Ship.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = vshader_Ship.glsl; path = shaders/vshader_Ship.glsl; sourceTree = SOURCE_ROOT; };
-		D63117BAE3C947C8AF4E529B /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DB2E0CC9CDD34ADA969FCFD0 /* cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = "glfw-3.2/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
-		DCA989CCE6C74282B3409535 /* nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = "glfw-3.2/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
-		E175488363CC464F8F500471 /* cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = "glfw-3.2/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
-		E27CDDC58D5E4340829BD86A /* Ball.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Ball.cpp; path = source/Ball.cpp; sourceTree = SOURCE_ROOT; };
-		E31902957BB848ABBBBAB1C9 /* glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = "glfw-3.2/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
-		E9B76E0797C24073B426B699 /* posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = "glfw-3.2/src/posix_tls.h"; sourceTree = SOURCE_ROOT; };
-		EF23F5EBB8FD431982C24FEA /* nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = "glfw-3.2/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
-		F59D9390EF814DEFA44AB17C /* fshader_Player.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = fshader_Player.glsl; path = shaders/fshader_Player.glsl; sourceTree = SOURCE_ROOT; };
-		F6E726EBD7394D0CBE707E17 /* cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = "glfw-3.2/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
-		FE78818CC7044AABAE5CDCF6 /* soccer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = soccer; path = soccer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E44FA4F525D44B096083597 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = "glfw-3.2/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
+		0FCE54E68382408287523423 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = "glfw-3.2/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
+		16CCBAEC7B2B40149EB97EB6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "build/glfw-3.2/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
+		186E05CDD81D4496979CB80D /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = "glfw-3.2/src/internal.h"; sourceTree = SOURCE_ROOT; };
+		1A1ABE5334B54F3B83D82FEA /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = "glfw-3.2/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
+		1E4A2101CF964CF4B2CDCD61 /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = build/CMakeFiles/soccer.dir/Info.plist; sourceTree = SOURCE_ROOT; };
+		20AA23952DEC44C59EFBF522 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = player.cpp; path = source/player.cpp; sourceTree = SOURCE_ROOT; };
+		24D35E2D13EE4F56AFF01E92 /* soccer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = soccer; sourceTree = BUILT_PRODUCTS_DIR; };
+		3271625032E74B85937C0433 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/shader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = shader.cpp; path = shaders/shader.cpp; sourceTree = SOURCE_ROOT; };
+		32A28D9238E84F18B6713AED /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3A08E802EDED4F1788531B7A /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2E05461D984164A35918F7 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "glfw-3.2/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+		3EADAFB3E1514A99BA3B5A2A /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		43B0177E11664A3DBAE18F9D /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Arrow.cpp; path = source/Arrow.cpp; sourceTree = SOURCE_ROOT; };
+		4694C80798C544058B916DE3 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = "glfw-3.2/src/init.c"; sourceTree = SOURCE_ROOT; };
+		57C2A8DEAAAC436D9138D95F /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = "glfw-3.2/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
+		5807D8AE89FB4E2CA73329DF /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/vec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vec.h; path = source/utils/vec.h; sourceTree = SOURCE_ROOT; };
+		5F6BE25B63E24AF89B061B29 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = "glfw-3.2/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
+		63B440C7BE3D4C5981A6A930 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = "glfw-3.2/src/context.c"; sourceTree = SOURCE_ROOT; };
+		65EF73E8A22B4E7689DFB0CD /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/mat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mat.h; path = source/utils/mat.h; sourceTree = SOURCE_ROOT; };
+		6C341F510D4C4D6FAA6C2C94 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Ball.cpp; path = source/Ball.cpp; sourceTree = SOURCE_ROOT; };
+		70A6407109E44EB1ABA224FB /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = source/main.cpp; sourceTree = SOURCE_ROOT; };
+		7628C6783B0B4A5595DF9960 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = "glfw-3.2/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
+		7763B9E1AA1F4686A5365CAF /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = "glfw-3.2/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
+		7810DFB5F8C341488EB3748C /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = "glfw-3.2/deps/glad.c"; sourceTree = SOURCE_ROOT; };
+		7FA348B435F84BA182BB9FCC /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = player.h; path = source/player.h; sourceTree = SOURCE_ROOT; };
+		915EBB54657147BCA52E311D /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Goal.cpp; path = source/Goal.cpp; sourceTree = SOURCE_ROOT; };
+		9CEEB223C76241C8A5FE79B6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Ship.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = vshader_Ship.glsl; path = shaders/vshader_Ship.glsl; sourceTree = SOURCE_ROOT; };
+		9EFF24188B024D13BF489359 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = "glfw-3.2/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
+		A039EC70949E4355A7D5E436 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/Angel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Angel.h; path = source/utils/Angel.h; sourceTree = SOURCE_ROOT; };
+		A5A5322B8CFD4433A4BA590A /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad/glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = "glfw-3.2/deps/glad/glad.h"; sourceTree = SOURCE_ROOT; };
+		B1EEE4BD1DC8474DB5DD52F0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = "glfw-3.2/src/monitor.c"; sourceTree = SOURCE_ROOT; };
+		B34C85BB96BF4AE0B2DEF8C3 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Player.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = fshader_Player.glsl; path = shaders/fshader_Player.glsl; sourceTree = SOURCE_ROOT; };
+		B3B7425D39EA418B8D6A9C51 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = "glfw-3.2/src/window.c"; sourceTree = SOURCE_ROOT; };
+		B56B044E606F4D6A91D687E0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = "glfw-3.2/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
+		B6DC6D5E0EFD45F8A7CDDF1A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Ball.h; path = source/Ball.h; sourceTree = SOURCE_ROOT; };
+		BB249157528E4364AE5C6C49 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = "glfw-3.2/src/input.c"; sourceTree = SOURCE_ROOT; };
+		C5F5CD4751F544E19D5E4279 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = "glfw-3.2/src/posix_tls.c"; sourceTree = SOURCE_ROOT; };
+		C68CD4CC2B124B3C938A1B44 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Ship.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = fshader_Ship.glsl; path = shaders/fshader_Ship.glsl; sourceTree = SOURCE_ROOT; };
+		CF0529A902B045DE8414D07E /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D237A7DBF71549BF83CCD32A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Goal.hpp; path = source/Goal.hpp; sourceTree = SOURCE_ROOT; };
+		D6C80C7ED36B4C1080ED8572 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = "glfw-3.2/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
+		D71A3D8933E8465B94D30528 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/CheckError.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CheckError.h; path = source/utils/CheckError.h; sourceTree = SOURCE_ROOT; };
+		DC2652F70D7A42828B7BDD87 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = "glfw-3.2/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
+		DE8C7FA1E4B74355AB74CC0B /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Player.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = vshader_Player.glsl; path = shaders/vshader_Player.glsl; sourceTree = SOURCE_ROOT; };
+		E686CD0400F54E11AC52FD38 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = "glfw-3.2/src/posix_tls.h"; sourceTree = SOURCE_ROOT; };
+		EB583D343D92403C902F3376 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = common.h; path = source/common.h; sourceTree = SOURCE_ROOT; };
+		F89F1468C69C408E9FBF5D46 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Arrow.hpp; path = source/Arrow.hpp; sourceTree = SOURCE_ROOT; };
+		FCD1B5429C0E4C51A83C1254 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = "glfw-3.2/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
+		FE43BC6195DC40F8B39894EA /* glad */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		141EF0B39682444EBF8BF7D5 = {
+		22BA2354ADDA46CDB37C69DF /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B3C3654D14145FBA45147A3 /* soccer */,
-				97559BDF16134F2398C18601 /* glad */,
-				48507F1DBD994EF0B63CB78F /* ALL_BUILD */,
-				EC7EA6CAE4564BB1AB14782A /* GLFW3 */,
-				C38501D07A514D2C82DE8F6C /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		1BAB5EA568F34DE69E3614C6 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				0B870B72023F4466B979912B /* glad.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		33C14A7A058D4990A08CA4EA /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				715E8CB25AA84620ADC2B51C /* glfw_config.h */,
-				E31902957BB848ABBBBAB1C9 /* glfw3.h */,
-				995305B004AA4AB6AC0561B4 /* glfw3native.h */,
-				152DBF8CA0C84065A79A919F /* cocoa_joystick.h */,
-				E175488363CC464F8F500471 /* cocoa_platform.h */,
-				9F345DB9D95545DBADE1F5C9 /* internal.h */,
-				DCA989CCE6C74282B3409535 /* nsgl_context.h */,
-				E9B76E0797C24073B426B699 /* posix_tls.h */,
+				A5A5322B8CFD4433A4BA590A /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad/glad.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
 		};
-		48507F1DBD994EF0B63CB78F /* ALL_BUILD */ = {
+		24126D318030444D83B33DFA /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				F48A62F041C84B99B0FCC551 /* CMake Rules */,
-				58EDE9D3B75049F29A462856 /* CMakeLists.txt */,
+				7810DFB5F8C341488EB3748C /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		362F2F2E56484CF796F1EE25 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				FDD3100B316145AD9BA9283F /* CMake Rules */,
+				CF0529A902B045DE8414D07E /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		735DA7064655455CB8F8E2BF /* Source Files */ = {
+		6130A0B2AEEA499BBB6A1B9A /* GLFW3 */ = {
 			isa = PBXGroup;
 			children = (
-				F6E726EBD7394D0CBE707E17 /* cocoa_init.m */,
-				24562E0F9C2A4C85961114E2 /* cocoa_joystick.m */,
-				33731AD046E94AA79E26A69D /* cocoa_monitor.m */,
-				7397C20C07DA4E30967235C6 /* cocoa_time.c */,
-				DB2E0CC9CDD34ADA969FCFD0 /* cocoa_window.m */,
-				4427CEDEAAF74B42BB610CAF /* context.c */,
-				84A7144FC9DF4E06BA85DDAD /* init.c */,
-				5E4925562D4D48C1AA14BB3E /* input.c */,
-				A9626E2C263D41A1A938E541 /* monitor.c */,
-				EF23F5EBB8FD431982C24FEA /* nsgl_context.m */,
-				031DA9549CC84CC5BF04786A /* posix_tls.c */,
-				412E56FD734B4529BC1380AE /* vulkan.c */,
-				63068D263A564B5FA7BBB109 /* window.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		7C6D6FEAF68D4644BCFB390B /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				70F532011AC34835B6D08F83 /* Ball.h */,
-				B10FF4501B7245609C6855CD /* common.h */,
-				2329D89D0F0C4CAEA0AA40FD /* player.h */,
-				3E408492D10C4F008C895485 /* Angel.h */,
-				224EE1FC257BEE0400A9A7EA /* Goal.hpp */,
-				9ED3DBB796954253A84784A4 /* CheckError.h */,
-				8804B6789AD448B49EBFB8A8 /* mat.h */,
-				59BAFF58D2AC47478FE7DD27 /* vec.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		8606CD3EADFF4B068CA6612E /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				5824FC0BE60648BCB68454BB /* shader.cpp */,
-				224EE1FB257BEE0400A9A7EA /* Goal.cpp */,
-				E27CDDC58D5E4340829BD86A /* Ball.cpp */,
-				8D7B350140CB43CBA0BE0A97 /* main.cpp */,
-				0142CF9DA85740A48F5CB6AE /* player.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		8B3C3654D14145FBA45147A3 /* soccer */ = {
-			isa = PBXGroup;
-			children = (
-				7C6D6FEAF68D4644BCFB390B /* Header Files */,
-				8606CD3EADFF4B068CA6612E /* Source Files */,
-				90126FD25FF34A62B2362D85 /* Resources */,
-				657B5B056B1142D69D7930BE /* CMakeLists.txt */,
-				F59D9390EF814DEFA44AB17C /* fshader_Player.glsl */,
-				55D98636DD3E49E094F23B18 /* fshader_Ship.glsl */,
-				9315D6D21A7040E4AEF2598E /* vshader_Player.glsl */,
-				C1F6FF8652154B3ABE4E8334 /* vshader_Ship.glsl */,
-			);
-			name = soccer;
-			sourceTree = "<group>";
-		};
-		90126FD25FF34A62B2362D85 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3602C49E5D1749B0989CAFEB /* Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		97559BDF16134F2398C18601 /* glad */ = {
-			isa = PBXGroup;
-			children = (
-				F668FFDD3B06409D8482E82A /* Header Files */,
-				1BAB5EA568F34DE69E3614C6 /* Source Files */,
-				D63117BAE3C947C8AF4E529B /* CMakeLists.txt */,
-			);
-			name = glad;
-			sourceTree = "<group>";
-		};
-		B132AC671A4C4CF7A8BBF84D /* glfw */ = {
-			isa = PBXGroup;
-			children = (
-				735DA7064655455CB8F8E2BF /* Source Files */,
-				33C14A7A058D4990A08CA4EA /* Header Files */,
-				521AB4F4E0B94C12959A6979 /* CMakeLists.txt */,
-			);
-			name = glfw;
-			sourceTree = "<group>";
-		};
-		C38501D07A514D2C82DE8F6C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3038FB8CA2E8454AA6EE5751 /* libglad.a */,
-				8B62CAE37D784ACF88D0B8A3 /* libglfw3.a */,
-				FE78818CC7044AABAE5CDCF6 /* soccer */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EC7EA6CAE4564BB1AB14782A /* GLFW3 */ = {
-			isa = PBXGroup;
-			children = (
-				B132AC671A4C4CF7A8BBF84D /* glfw */,
+				A65D356DB1FA4AA29D91E07D /* glfw */,
 			);
 			name = GLFW3;
 			sourceTree = "<group>";
 		};
-		F48A62F041C84B99B0FCC551 /* CMake Rules */ = {
+		7BBCF10A328546449019237A = {
+			isa = PBXGroup;
+			children = (
+				7D6675E4D94A45CF8C4E1E4D /* soccer */,
+				8E7723058C5443748DA231D0 /* glad */,
+				362F2F2E56484CF796F1EE25 /* ALL_BUILD */,
+				6130A0B2AEEA499BBB6A1B9A /* GLFW3 */,
+				B6D3ECEF4F654DF8AFB50257 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D6675E4D94A45CF8C4E1E4D /* soccer */ = {
+			isa = PBXGroup;
+			children = (
+				B4745F08AF6844D09790580E /* Header Files */,
+				D946B8E212D149A39C6FDA3E /* Source Files */,
+				C40CAF3CD9A34FC2BCA6122B /* Resources */,
+				32A28D9238E84F18B6713AED /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */,
+				B34C85BB96BF4AE0B2DEF8C3 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Player.glsl */,
+				C68CD4CC2B124B3C938A1B44 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/fshader_Ship.glsl */,
+				DE8C7FA1E4B74355AB74CC0B /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Player.glsl */,
+				9CEEB223C76241C8A5FE79B6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/vshader_Ship.glsl */,
+			);
+			name = soccer;
+			sourceTree = "<group>";
+		};
+		8512AC8957CA453E8329B998 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				57C2A8DEAAAC436D9138D95F /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_init.m */,
+				B56B044E606F4D6A91D687E0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.m */,
+				1A1ABE5334B54F3B83D82FEA /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_monitor.m */,
+				FCD1B5429C0E4C51A83C1254 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_time.c */,
+				7628C6783B0B4A5595DF9960 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_window.m */,
+				63B440C7BE3D4C5981A6A930 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/context.c */,
+				4694C80798C544058B916DE3 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/init.c */,
+				BB249157528E4364AE5C6C49 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/input.c */,
+				B1EEE4BD1DC8474DB5DD52F0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/monitor.c */,
+				DC2652F70D7A42828B7BDD87 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.m */,
+				C5F5CD4751F544E19D5E4279 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.c */,
+				0FCE54E68382408287523423 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/vulkan.c */,
+				B3B7425D39EA418B8D6A9C51 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		8E7723058C5443748DA231D0 /* glad */ = {
+			isa = PBXGroup;
+			children = (
+				22BA2354ADDA46CDB37C69DF /* Header Files */,
+				24126D318030444D83B33DFA /* Source Files */,
+				3EADAFB3E1514A99BA3B5A2A /* /Users/Sam/Desktop/intro-graphics/graphics-final/CMakeLists.txt */,
+			);
+			name = glad;
+			sourceTree = "<group>";
+		};
+		A65D356DB1FA4AA29D91E07D /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				8512AC8957CA453E8329B998 /* Source Files */,
+				DD54F5E30DCD4DEA899760C5 /* Header Files */,
+				3A2E05461D984164A35918F7 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		B4745F08AF6844D09790580E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				F89F1468C69C408E9FBF5D46 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.hpp */,
+				B6DC6D5E0EFD45F8A7CDDF1A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.h */,
+				D237A7DBF71549BF83CCD32A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.hpp */,
+				EB583D343D92403C902F3376 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/common.h */,
+				7FA348B435F84BA182BB9FCC /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.h */,
+				A039EC70949E4355A7D5E436 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/Angel.h */,
+				D71A3D8933E8465B94D30528 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/CheckError.h */,
+				65EF73E8A22B4E7689DFB0CD /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/mat.h */,
+				5807D8AE89FB4E2CA73329DF /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/utils/vec.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B6D3ECEF4F654DF8AFB50257 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE43BC6195DC40F8B39894EA /* glad */,
+				3A08E802EDED4F1788531B7A /* glfw */,
+				24D35E2D13EE4F56AFF01E92 /* soccer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C40CAF3CD9A34FC2BCA6122B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E4A2101CF964CF4B2CDCD61 /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D946B8E212D149A39C6FDA3E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3271625032E74B85937C0433 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/shader.cpp */,
+				43B0177E11664A3DBAE18F9D /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.cpp */,
+				6C341F510D4C4D6FAA6C2C94 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.cpp */,
+				915EBB54657147BCA52E311D /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.cpp */,
+				70A6407109E44EB1ABA224FB /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/main.cpp */,
+				20AA23952DEC44C59EFBF522 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		DD54F5E30DCD4DEA899760C5 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				16CCBAEC7B2B40149EB97EB6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/glfw_config.h */,
+				5F6BE25B63E24AF89B061B29 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3.h */,
+				D6C80C7ED36B4C1080ED8572 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include/GLFW/glfw3native.h */,
+				9EFF24188B024D13BF489359 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.h */,
+				7763B9E1AA1F4686A5365CAF /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_platform.h */,
+				186E05CDD81D4496979CB80D /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/internal.h */,
+				0E44FA4F525D44B096083597 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.h */,
+				E686CD0400F54E11AC52FD38 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		FDD3100B316145AD9BA9283F /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		F668FFDD3B06409D8482E82A /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				2A2E11E7CAAD4E5C9F425665 /* glad.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C84B745AB08F4B399A1A4196 /* glfw */ = {
+		1A9776B2E15742AD82ABB7B3 /* glfw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE9B411616864BEEAA47C887 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildConfigurationList = 9C574DE4AC774E6FB78FED22 /* Build configuration list for PBXNativeTarget "glfw" */;
 			buildPhases = (
-				CF860D64E23C4658B1311ABE /* Sources */,
+				B88008B6B0C548B188FF9490 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4356709A61474A05A2E11410 /* PBXTargetDependency */,
+				A519203D9BF4478490D9B9A6 /* PBXTargetDependency */,
 			);
 			name = glfw;
 			productName = glfw;
-			productReference = 8B62CAE37D784ACF88D0B8A3 /* libglfw3.a */;
+			productReference = 3A08E802EDED4F1788531B7A /* glfw */;
 			productType = "com.apple.product-type.library.static";
 		};
-		EDD722BFFFE140E18369FEA8 /* soccer */ = {
+		38C482E0FED14C4AA1712C77 /* glad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 043EAB0993BF4C94B692E17A /* Build configuration list for PBXNativeTarget "soccer" */;
+			buildConfigurationList = 64290C66B95D49E2927CA2CD /* Build configuration list for PBXNativeTarget "glad" */;
 			buildPhases = (
-				35EAD03233864403AC301B35 /* Sources */,
+				6A203A8227BC47AE83D44958 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C641B6C4013A4077BFAF84F5 /* PBXTargetDependency */,
-				AA57A9FCA87A4E34BC72D0EB /* PBXTargetDependency */,
-				755155B7FC74403880E55B20 /* PBXTargetDependency */,
-			);
-			name = soccer;
-			productName = soccer;
-			productReference = FE78818CC7044AABAE5CDCF6 /* soccer */;
-			productType = "com.apple.product-type.application";
-		};
-		FCC9F501747A4114839D021E /* glad */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFCA00A943D6416380703869 /* Build configuration list for PBXNativeTarget "glad" */;
-			buildPhases = (
-				031D3BA5B7F9407B8FF5998B /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				919F8FAB009B4DB8815E79F7 /* PBXTargetDependency */,
-				05034B90350049409DEE569C /* PBXTargetDependency */,
+				19123A279D474F8792FC4ABC /* PBXTargetDependency */,
+				B89F392B7F804A7D8FDCCA27 /* PBXTargetDependency */,
 			);
 			name = glad;
 			productName = glad;
-			productReference = 3038FB8CA2E8454AA6EE5751 /* libglad.a */;
+			productReference = FE43BC6195DC40F8B39894EA /* glad */;
 			productType = "com.apple.product-type.library.static";
+		};
+		E4E84312AD1B482B88A85555 /* soccer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C68A1D3C01C9492096ABBA02 /* Build configuration list for PBXNativeTarget "soccer" */;
+			buildPhases = (
+				35E3FFEC54DB4C369BAC9A99 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEFEE67207494632AFE0CB93 /* PBXTargetDependency */,
+				3E29927F0B2E4F6DA9BF2B38 /* PBXTargetDependency */,
+				F8B06AF4B4A14770B6BCA966 /* PBXTargetDependency */,
+			);
+			name = soccer;
+			productName = soccer;
+			productReference = 24D35E2D13EE4F56AFF01E92 /* soccer */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EBCA67E003314431A3B76DC9 /* Project object */ = {
+		8C3AAA93243C460E8203530E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1170;
 			};
-			buildConfigurationList = 502A63A6A3384A7388BA90A0 /* Build configuration list for PBXProject "SOCCER" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
+			buildConfigurationList = 21838BB55B7540E2B432AD7E /* Build configuration list for PBXProject "SOCCER" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				3E4BF0798EA54866AE7CDDFC /* Debug */,
+				C2969EDE655844C7B4AB6356 /* Release */,
+				A1FCD13EFD364389B322A0C1 /* MinSizeRel */,
+				51B55E1F9C89437A9D8C2046 /* RelWithDebInfo */,
 			);
-			mainGroup = 141EF0B39682444EBF8BF7D5;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 7BBCF10A328546449019237A;
 			projectDirPath = ../;
 			projectRoot = "";
 			targets = (
-				70AB2B91FE7E47F287B6E9E3 /* ALL_BUILD */,
-				62ED0E4967B646A59E7A7C52 /* ZERO_CHECK */,
-				FCC9F501747A4114839D021E /* glad */,
-				C84B745AB08F4B399A1A4196 /* glfw */,
-				EDD722BFFFE140E18369FEA8 /* soccer */,
+				C7DBE97C0FDC44BF8F212E4A /* ALL_BUILD */,
+				624C47BC47344E239D84F5EB /* ZERO_CHECK */,
+				38C482E0FED14C4AA1712C77 /* glad */,
+				1A9776B2E15742AD82ABB7B3 /* glfw */,
+				E4E84312AD1B482B88A85555 /* soccer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C52B1563E4CF4B1399B6059C /* CMake Rules */ = {
+		1AB0C8FB77C24A5986C66EA6 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		55E3774B08CC47CB98C94EB6 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -443,7 +524,7 @@
 			shellScript = "make -C /Users/Sam/Desktop/intro-graphics/graphics-final/build -f /Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		E2AC91A9C1B043288B5D5E88 /* CMake Rules */ = {
+		C720FCCE000A47F680F912B0 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -454,106 +535,303 @@
 			shellScript = "make -C /Users/Sam/Desktop/intro-graphics/graphics-final/build -f /Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
+		FF16B8A9D8004FC7B2B0D873 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		031D3BA5B7F9407B8FF5998B /* Sources */ = {
+		35E3FFEC54DB4C369BAC9A99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62581EC7201A427D9B416246 /* glad.c in Sources */,
+				72930C33330B4FF39450D5A6 /* /Users/Sam/Desktop/intro-graphics/graphics-final/shaders/shader.cpp */,
+				B5C41526071B4ABB94A5AF60 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Arrow.cpp */,
+				16D969C2704E4C77AB131399 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Ball.cpp */,
+				3A3B696E489E4A3C8F9EE6F8 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/Goal.cpp */,
+				BF30C16502934F078C710C0A /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/main.cpp */,
+				798844ED1203467D9E48C645 /* /Users/Sam/Desktop/intro-graphics/graphics-final/source/player.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35EAD03233864403AC301B35 /* Sources */ = {
+		6A203A8227BC47AE83D44958 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8332E2CAFABC4D4181B8DA6D /* shader.cpp in Sources */,
-				4204CD360F7C449F95315C78 /* Ball.cpp in Sources */,
-				EECFFDEE84C14C4BBE4E952B /* main.cpp in Sources */,
-				B8B62312DE9941C7BA423F33 /* player.cpp in Sources */,
-				224EE1FE257BEE0F00A9A7EA /* Goal.cpp in Sources */,
+				2784015684C345C0A150438C /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps/glad.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF860D64E23C4658B1311ABE /* Sources */ = {
+		B88008B6B0C548B188FF9490 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6BC2607A124FEEA33A1522 /* cocoa_init.m in Sources */,
-				74C211BFC929468A8AA87BF4 /* cocoa_joystick.m in Sources */,
-				C94ED6F602004095BF52AF99 /* cocoa_monitor.m in Sources */,
-				4B13F6A32B1A41D4954AFBC3 /* cocoa_time.c in Sources */,
-				6676B4A143FB467E8F36024F /* cocoa_window.m in Sources */,
-				9D60E7E577F7407DA3D98219 /* context.c in Sources */,
-				0C95BBF80AA6439382AC889A /* init.c in Sources */,
-				EF4D50C72943499EA5DA910B /* input.c in Sources */,
-				FC9B07403C0F4D2493B94BDA /* monitor.c in Sources */,
-				46620C0E80FD4921BBC1B33F /* nsgl_context.m in Sources */,
-				A4775F8CDC394A1BA006507D /* posix_tls.c in Sources */,
-				D903C49C0C1748C88E6E2A5E /* vulkan.c in Sources */,
-				24B2979CEDEF4378B38E7CF7 /* window.c in Sources */,
+				108685D9FCEC416BA8A85343 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_init.m */,
+				BB9D2EA732154078992D1420 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_joystick.m */,
+				152179D8968B48D79A99829D /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_monitor.m */,
+				EAA8E16F34734B0EBF374C63 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_time.c */,
+				C9096E94B4B641BF89B13C20 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/cocoa_window.m */,
+				ED516DFC110E4E8ABFED3CB2 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/context.c */,
+				92E7C86993C84538A8811087 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/init.c */,
+				211516D26521420BB54498E0 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/input.c */,
+				F567AA23A02B4A759B888365 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/monitor.c */,
+				65E9021DDDF34ACBA140BE43 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/nsgl_context.m */,
+				87AC2433693B474FB0AD52CB /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/posix_tls.c */,
+				E73864F018D24BA3B3BE1BD5 /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/vulkan.c */,
+				B248ECB67959423B850397DB /* /Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src/window.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		05034B90350049409DEE569C /* PBXTargetDependency */ = {
+		19123A279D474F8792FC4ABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C84B745AB08F4B399A1A4196 /* glfw */;
-			targetProxy = 1844B103B1AA476AA884868D /* PBXContainerItemProxy */;
+			target = 624C47BC47344E239D84F5EB /* ZERO_CHECK */;
+			targetProxy = B5E163F4CC6E46CF8A4BF3A6 /* PBXContainerItemProxy */;
 		};
-		4356709A61474A05A2E11410 /* PBXTargetDependency */ = {
+		3E29927F0B2E4F6DA9BF2B38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 62ED0E4967B646A59E7A7C52 /* ZERO_CHECK */;
-			targetProxy = B819ECDCA6404566B752E157 /* PBXContainerItemProxy */;
+			target = 38C482E0FED14C4AA1712C77 /* glad */;
+			targetProxy = AECEE1E66D6B4B7A85844CC0 /* PBXContainerItemProxy */;
 		};
-		46CC288846B84B43B7DFAF15 /* PBXTargetDependency */ = {
+		5A257D47ED86491C91A296B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 62ED0E4967B646A59E7A7C52 /* ZERO_CHECK */;
-			targetProxy = 8BE127C5E2004BF0AA1048B8 /* PBXContainerItemProxy */;
+			target = 38C482E0FED14C4AA1712C77 /* glad */;
+			targetProxy = 382622F890FC4B49AC6328DB /* PBXContainerItemProxy */;
 		};
-		755155B7FC74403880E55B20 /* PBXTargetDependency */ = {
+		65E265B62B10465CA43FD519 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C84B745AB08F4B399A1A4196 /* glfw */;
-			targetProxy = E2F8B48AD6754F0E8E3108A8 /* PBXContainerItemProxy */;
+			target = 624C47BC47344E239D84F5EB /* ZERO_CHECK */;
+			targetProxy = C7CF31A90D9C455EBF7BE128 /* PBXContainerItemProxy */;
 		};
-		7EE652D3BADC4BCCB83E0D14 /* PBXTargetDependency */ = {
+		A519203D9BF4478490D9B9A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FCC9F501747A4114839D021E /* glad */;
-			targetProxy = B90B5A0FC74D43AF8DBD97C8 /* PBXContainerItemProxy */;
+			target = 624C47BC47344E239D84F5EB /* ZERO_CHECK */;
+			targetProxy = 5D2E2B3AF4DB4A5C8242625F /* PBXContainerItemProxy */;
 		};
-		89F9EE0188084AB393C87696 /* PBXTargetDependency */ = {
+		B89F392B7F804A7D8FDCCA27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C84B745AB08F4B399A1A4196 /* glfw */;
-			targetProxy = 4E683EA6D01341C2B05D0CA2 /* PBXContainerItemProxy */;
+			target = 1A9776B2E15742AD82ABB7B3 /* glfw */;
+			targetProxy = EB88AF8A7D6D4962A169EEBA /* PBXContainerItemProxy */;
 		};
-		919F8FAB009B4DB8815E79F7 /* PBXTargetDependency */ = {
+		B9C17851E1F14E2FA46F0B3E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 62ED0E4967B646A59E7A7C52 /* ZERO_CHECK */;
-			targetProxy = EF6D3C0D95A547AE954DA68B /* PBXContainerItemProxy */;
+			target = E4E84312AD1B482B88A85555 /* soccer */;
+			targetProxy = 9AE443E56FD2414CAF3D3656 /* PBXContainerItemProxy */;
 		};
-		AA57A9FCA87A4E34BC72D0EB /* PBXTargetDependency */ = {
+		DEFEE67207494632AFE0CB93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FCC9F501747A4114839D021E /* glad */;
-			targetProxy = F5FCE0CE51FB4DAC8CCF107E /* PBXContainerItemProxy */;
+			target = 624C47BC47344E239D84F5EB /* ZERO_CHECK */;
+			targetProxy = B11BE2AF089D4FAD8BE8875C /* PBXContainerItemProxy */;
 		};
-		B971CCDDD9174B2FBDBB6BB6 /* PBXTargetDependency */ = {
+		EEC6720EF82745CF82A9A9FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EDD722BFFFE140E18369FEA8 /* soccer */;
-			targetProxy = 4F845F37C3474394850002A0 /* PBXContainerItemProxy */;
+			target = 1A9776B2E15742AD82ABB7B3 /* glfw */;
+			targetProxy = F68031E1A0FB4166B2B809E3 /* PBXContainerItemProxy */;
 		};
-		C641B6C4013A4077BFAF84F5 /* PBXTargetDependency */ = {
+		F8B06AF4B4A14770B6BCA966 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 62ED0E4967B646A59E7A7C52 /* ZERO_CHECK */;
-			targetProxy = AF566A5FC2FC40958584BEAD /* PBXContainerItemProxy */;
+			target = 1A9776B2E15742AD82ABB7B3 /* glfw */;
+			targetProxy = CB009DC8B48F418099D18A40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1430BAF85A984B059A2FCAFD /* Debug */ = {
+		127E006BDC9841EBBFAB64D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
+			};
+			name = Debug;
+		};
+		1EE1AB21263242938E94EA15 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		22181F57ECD447B386CE89F8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		292A8EDB0AB44575A233A2B2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
+				INFOPLIST_FILE = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist";
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/RelWithDebInfo/libglfw3.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/RelWithDebInfo/libglad.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/RelWithDebInfo/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = soccer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		40C25ABA7BB544B4BF9D13DE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		48C9371B98C74A939A55746B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src","/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		4E3BE8786AAC402EBF006873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		4FD930925831432A9F37A65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		541561396AC24EA4BC0E5CC8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src","/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5F902734668D414BA5EB3FB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -562,15 +840,105 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src","/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC -Wall ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		79EB2118F8604A91A61ACD72 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
+			};
+			name = MinSizeRel;
+		};
+		7D3D30AA172A49D0964298F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
+			};
+			name = Release;
+		};
+		88A2915A2CF14938A677B73B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src","/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8C63272C033B42549C1FFD62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
+				INFOPLIST_FILE = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist";
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Debug/libglfw3.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/Debug/libglad.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Debug/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = soccer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		90D1E540AFBA45DF8537C3A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "   ";
@@ -580,95 +948,18 @@
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Debug;
 		};
-		15F07C26B6234EBB9FB7B198 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glad;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
-		231472B5985C436E9D46F92F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
-				INFOPLIST_FILE = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist";
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Release/libglfw3.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/Release/libglad.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Release/libglfw3.a",
-					"-framework",
-					Cocoa,
-					"-framework",
-					IOKit,
-					"-framework",
-					CoreFoundation,
-					"-framework",
-					CoreVideo,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = soccer;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
-		2BC29762CF424C94926131A4 /* MinSizeRel */ = {
+		9BA0861589DD43C9B16994E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -677,137 +968,11 @@
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
-		2CF03F632D6F4A59A7DCAE06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Release;
 		};
-		343CDF2725A2497DA5634574 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
-		3E190C23DC714985B73C2D0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
-		403D57CDBF694C7D98259C9C /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
-		};
-		41AC86ACD9C4427996B882F0 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					_GLFW_USE_CONFIG_H,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src",
-				);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"-fPIC",
-					"-Wall",
-				);
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = MinSizeRel;
-		};
-		511CAF79717D4500ACBFA29F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
-			};
-			name = Debug;
-		};
-		64F1BB4913EC469AB85538E2 /* RelWithDebInfo */ = {
+		B9480FAF4DF645F1B0F030C3 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -816,15 +981,9 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "       -DNDEBUG ";
@@ -834,97 +993,51 @@
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = RelWithDebInfo;
 		};
-		69C9A7EEF43E45478E70B659 /* RelWithDebInfo */ = {
+		C2FC79C282744D018FC91EF6 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = RelWithDebInfo;
 		};
-		A102F16E19CB426B878BF106 /* Debug */ = {
+		C66884414D7E4DFB8F1E35AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Debug;
 		};
-		A268C75D0C574A45877A8008 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
-				INFOPLIST_FILE = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist";
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "   ";
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Debug/libglfw3.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/Debug/libglad.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Debug/libglfw3.a",
-					"-framework",
-					Cocoa,
-					"-framework",
-					IOKit,
-					"-framework",
-					CoreFoundation,
-					"-framework",
-					CoreVideo,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = soccer;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Debug;
-		};
-		A4B39072CDC14CB588A3AEF9 /* MinSizeRel */ = {
+		CE73A508E43748AD84204E7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -932,116 +1045,71 @@
 				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
 				INFOPLIST_FILE = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist";
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/MinSizeRel/libglfw3.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/MinSizeRel/libglad.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/MinSizeRel/libglfw3.a",
-					"-framework",
-					Cocoa,
-					"-framework",
-					IOKit,
-					"-framework",
-					CoreFoundation,
-					"-framework",
-					CoreVideo,
-				);
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Release/libglfw3.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/Release/libglad.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/Release/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = soccer;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		DB079B96141445F4B7E40614 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
+				INFOPLIST_FILE = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist";
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/MinSizeRel/libglfw3.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/MinSizeRel/libglad.a /Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/MinSizeRel/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = soccer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		AE8570475AF74CDA82857B66 /* RelWithDebInfo */ = {
+		E583B406230C4C9689268D2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					_GLFW_USE_CONFIG_H,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src",
-				);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"-fPIC",
-					"-Wall",
-				);
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
-		};
-		B436D4D4AA3440AFA5A92167 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					_GLFW_USE_CONFIG_H,
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src",
-				);
 				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = (
-					"-fPIC",
-					"-Wall",
-				);
-				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
+				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
+			name = Release;
 		};
-		B43868630FBB400BB221A84C /* MinSizeRel */ = {
+		E7AA5DC0AEA74C59951EE08D /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1050,15 +1118,9 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
+				HEADER_SEARCH_PATHS = ("/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps","/Users/Sam/Desktop/intro-graphics/graphics-final/source","/Users/Sam/Desktop/intro-graphics/graphics-final/source/common","/Users/Sam/Desktop/intro-graphics/graphics-final/shaders","/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include");
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "    -DNDEBUG ";
@@ -1068,212 +1130,100 @@
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		CA70DB31CFED4FC79D645476 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
-			};
-			name = Release;
-		};
-		D92649FC7366401CB6248A71 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
-			};
-			name = MinSizeRel;
-		};
-		DA0EC059C7EA48758A28524A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					_GLFW_USE_CONFIG_H,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/src",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src",
-				);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"-fPIC",
-					"-Wall",
-				);
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
-		DBD9B7053DFD4D519B7602AE /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/build";
-			};
-			name = RelWithDebInfo;
-		};
-		DC9646FFF490425C94A0B4F8 /* Debug */ = {
+		F05DB3E1CA1645AA818047E6 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
+				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
-		};
-		F71F649291464FE4A51F965B /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/deps",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/source/common",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/shaders",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/glfw-3.2/include",
-				);
-				INFOPLIST_FILE = "/Users/Sam/Desktop/intro-graphics/graphics-final/build/CMakeFiles/soccer.dir/Info.plist";
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/RelWithDebInfo/libglfw3.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/RelWithDebInfo/libglad.a",
-					"/Users/Sam/Desktop/intro-graphics/graphics-final/build/glfw-3.2/src/RelWithDebInfo/libglfw3.a",
-					"-framework",
-					Cocoa,
-					"-framework",
-					IOKit,
-					"-framework",
-					CoreFoundation,
-					"-framework",
-					CoreVideo,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = soccer;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Sam/Desktop/intro-graphics/graphics-final/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = RelWithDebInfo;
+			name = MinSizeRel;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		043EAB0993BF4C94B692E17A /* Build configuration list for PBXNativeTarget "soccer" */ = {
+		21838BB55B7540E2B432AD7E /* Build configuration list for PBXProject "SOCCER" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A268C75D0C574A45877A8008 /* Debug */,
-				231472B5985C436E9D46F92F /* Release */,
-				A4B39072CDC14CB588A3AEF9 /* MinSizeRel */,
-				F71F649291464FE4A51F965B /* RelWithDebInfo */,
+				127E006BDC9841EBBFAB64D3 /* Debug */,
+				7D3D30AA172A49D0964298F2 /* Release */,
+				79EB2118F8604A91A61ACD72 /* MinSizeRel */,
+				40C25ABA7BB544B4BF9D13DE /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		14824806778E4ED186F457F4 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		492FFBFA1B37437BB4284690 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC9646FFF490425C94A0B4F8 /* Debug */,
-				2CF03F632D6F4A59A7DCAE06 /* Release */,
-				2BC29762CF424C94926131A4 /* MinSizeRel */,
-				403D57CDBF694C7D98259C9C /* RelWithDebInfo */,
+				4E3BE8786AAC402EBF006873 /* Debug */,
+				E583B406230C4C9689268D2A /* Release */,
+				F05DB3E1CA1645AA818047E6 /* MinSizeRel */,
+				1EE1AB21263242938E94EA15 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		2711300D2FC8431496F6CA1F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		64290C66B95D49E2927CA2CD /* Build configuration list for PBXNativeTarget "glad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A102F16E19CB426B878BF106 /* Debug */,
-				3E190C23DC714985B73C2D0D /* Release */,
-				343CDF2725A2497DA5634574 /* MinSizeRel */,
-				69C9A7EEF43E45478E70B659 /* RelWithDebInfo */,
+				90D1E540AFBA45DF8537C3A7 /* Debug */,
+				4FD930925831432A9F37A65F /* Release */,
+				E7AA5DC0AEA74C59951EE08D /* MinSizeRel */,
+				B9480FAF4DF645F1B0F030C3 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		502A63A6A3384A7388BA90A0 /* Build configuration list for PBXProject "SOCCER" */ = {
+		9C574DE4AC774E6FB78FED22 /* Build configuration list for PBXNativeTarget "glfw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				511CAF79717D4500ACBFA29F /* Debug */,
-				CA70DB31CFED4FC79D645476 /* Release */,
-				D92649FC7366401CB6248A71 /* MinSizeRel */,
-				DBD9B7053DFD4D519B7602AE /* RelWithDebInfo */,
+				5F902734668D414BA5EB3FB7 /* Debug */,
+				48C9371B98C74A939A55746B /* Release */,
+				88A2915A2CF14938A677B73B /* MinSizeRel */,
+				541561396AC24EA4BC0E5CC8 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		AE9B411616864BEEAA47C887 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+		A4A2A05F316A41128C170A03 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B436D4D4AA3440AFA5A92167 /* Debug */,
-				DA0EC059C7EA48758A28524A /* Release */,
-				41AC86ACD9C4427996B882F0 /* MinSizeRel */,
-				AE8570475AF74CDA82857B66 /* RelWithDebInfo */,
+				C66884414D7E4DFB8F1E35AE /* Debug */,
+				9BA0861589DD43C9B16994E1 /* Release */,
+				22181F57ECD447B386CE89F8 /* MinSizeRel */,
+				C2FC79C282744D018FC91EF6 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		CFCA00A943D6416380703869 /* Build configuration list for PBXNativeTarget "glad" */ = {
+		C68A1D3C01C9492096ABBA02 /* Build configuration list for PBXNativeTarget "soccer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1430BAF85A984B059A2FCAFD /* Debug */,
-				15F07C26B6234EBB9FB7B198 /* Release */,
-				B43868630FBB400BB221A84C /* MinSizeRel */,
-				64F1BB4913EC469AB85538E2 /* RelWithDebInfo */,
+				8C63272C033B42549C1FFD62 /* Debug */,
+				CE73A508E43748AD84204E7B /* Release */,
+				DB079B96141445F4B7E40614 /* MinSizeRel */,
+				292A8EDB0AB44575A233A2B2 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EBCA67E003314431A3B76DC9 /* Project object */;
+	rootObject = 8C3AAA93243C460E8203530E /* Project object */;
 }

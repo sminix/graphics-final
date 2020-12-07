@@ -1,4 +1,5 @@
 #include "common.h"
+//#include "Arrow.hpp"
 
 using namespace Angel;
 
@@ -14,11 +15,19 @@ Player *player6;
 Goal *rgoal;
 Goal *bgoal;
 
+Arrow *arrow;
+
 std::vector < Player > players;
+
 unsigned int red_score;
 unsigned int blue_score;
+
 std::vector<bool> in_out;
 std::vector<bool> launch;
+
+double xpos, ypos;
+
+unsigned int count;
 
 
 static void error_callback(int error, const char* description)
@@ -30,17 +39,8 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 {
   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     glfwSetWindowShouldClose(window, GLFW_TRUE);
-  
-  if (key == GLFW_KEY_SPACE){
-    if(action == GLFW_PRESS){
-      //ball->start_thruster();
-    }
-    if(action == GLFW_RELEASE){
-      //ball->stop_thruster();
-    }
-  }
 }
-
+//if a goal is scored
 unsigned int score(char goal){
   if (goal == 'r'){
 	red_score += 1;
@@ -65,6 +65,7 @@ unsigned int score(char goal){
 bool inside;
 
 //TODO: Inside outside test
+//See if the mouse is inside a player
 void inside_outside_test(vec2 point){
   
   
@@ -127,44 +128,35 @@ void init(){
   player6->gl_init();
   rgoal->gl_init();
   bgoal->gl_init();
+  arrow->gl_init();
   
 }
 
+//collision functions checks if the current player is colliding with any other player or the ball
 unsigned int collision(unsigned int i, Ball ball){
+  //get player based on index i
   Player player1 = players[i];
+  //go through rest of list
   for (unsigned int j = 0; j < 6 ; j++){
 	if (i == j){
 	  continue;
 	}
+	//get second player
 	Player player2 = players[j];
-	
-	if ((abs(player1.state.cur_location.x - player2.state.cur_location.x) < 3.01) and (abs(player1.state.cur_location.y - player2.state.cur_location.y) < 3.01)){
-	  //std::cout<< "here" << std::endl;
+	//if the two players are too close, return the index of the player
+	if ((abs(player1.state.cur_location.x - player2.state.cur_location.x) < 3.001) and (abs(player1.state.cur_location.y - player2.state.cur_location.y) < 3.001)){
 	  return j;
 	}
   }
-  
+  //if the player and ball are too close, return 10 to represent collision with the ball
   if ((abs(player1.state.cur_location.x - ball.get_loc().x) < 2.51) and (abs(player1.state.cur_location.y - ball.get_loc().y) < 2.51)){
 	return 10;
   }
   
   return 100;
-	/*
-	
-	for (unsigned int m = 1; m < 19; m++){
-	  for (unsigned int n = 1; n < 19; n++){
-		std::cout << player1->player_vert[m] << std::endl;
-		if (abs(player1->player_vert[m].x - player2->player_vert[n].x) < .01 and abs(player1->player_vert[m].y - player2->player_vert[n].y) < .01){
-		  std::cout << "here" << std::endl;
-		  player1->state.velocity = player1->player_vert[m] - player1->state.cur_location;
-		  //player1.update_state();
-		  player2->state.velocity = player2->player_vert[n] - player2->state.cur_location;
-		  //player2.update_state();
-		}
-	  }
-	}
-	*/
 }
+
+//Reset the players to there original position
 void reset(mat4 proj){
   
   for (unsigned int i = 0; i < 6; i ++){
@@ -213,7 +205,7 @@ int main(void)
 {
   blue_score = 0;
   red_score = 0;
-  std::cout << "Red: " << red_score << " Blue: " << blue_score << std::endl;
+  
   GLFWwindow* window;
   
   glfwSetErrorCallback(error_callback);
@@ -228,7 +220,6 @@ int main(void)
   
   glfwWindowHint(GLFW_SAMPLES, 10);
   
-  
   window = glfwCreateWindow(1024, 768, "Soccer!", NULL, NULL);
   if (!window){
     glfwTerminate();
@@ -242,19 +233,23 @@ int main(void)
   glfwMakeContextCurrent(window);
   gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
   glfwSwapInterval(1);
-  
+  //make players, ball and goals
   player1 = new Player(vec2(-10,-10), 'r');
   player2 = new Player(vec2(0,-10), 'r');
   player3 = new Player(vec2(10,-10), 'r');
+  
   player4 = new Player(vec2(-10, 10), 'b');
   player5 = new Player(vec2(0, 10), 'b');
   player6 = new Player(vec2(10, 10), 'b');
+  
   rgoal = new Goal(vec2(0,-19));
   bgoal = new Goal(vec2(0,19));
   ball = new Ball();
   
-  init();
+  arrow = new Arrow();
   
+  init();
+  //add players to players list
   players.push_back(*player1);
   players.push_back(*player2);
   players.push_back(*player3);
@@ -267,14 +262,19 @@ int main(void)
 	launch.push_back(false);
   }
   unsigned int over = 0;
+  count = 0;
+  std::cout << "Red: " << red_score << " Blue: " << blue_score << std::endl;
   while (!glfwWindowShouldClose(window)){
+	
     animate();
     mat4 proj = Ortho2D(-20.0, 20.0, -20.0, 20.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
+	
 	rgoal->draw(proj);
 	bgoal->draw(proj);
     ball->draw(proj);
+	arrow->draw(proj);
 	for (unsigned int i = 0; i < 6; i++){
 	  players[i].draw(proj);
 	}
@@ -302,25 +302,25 @@ int main(void)
     int width, height;
     glfwGetFramebufferSize(window, &width, &height);
     glViewport(0, 0, width, height);
-    
-    //Pick a coordinate system that makes the most sense to you
-    //(left, right, top, bottom)
-    //mat4 proj = Ortho2D(-20.0, 20.0, -20.0, 20.0);
 
-    
+    //Collision detection check
 	for (unsigned int i = 0; i < 6; i++){
 	  unsigned int j = collision(i, *ball);
+	  //j = 100 when no collision, so check if there is a collision
 	  if (j != 100){
+		//if the collision is between a player and the ball
 		if (j == 10){
-		  vec2 vel = players[i].state.cur_location - ball->get_loc();
-		  ball->set_vel(-2 * vel);
-		  players[i].state.velocity = vel/2;
-		  
+		  vec2 dir = normalize(players[i].state.cur_location - ball->get_loc());
+		  float power = length(players[i].state.velocity) + length(ball->get_vel());
+		  players[i].state.velocity = dir * power / 3;
+		  ball->set_vel(-2 * dir * power / 3);
 		}
+		//if it is a collision between 2 players
 		else{
-		  vec2 vel = players[j].state.cur_location - players[i].state.cur_location;
-		  players[i].state.velocity = -vel / 2;
-		  players[j].state.velocity = vel / 2;
+		  vec2 dir = normalize(players[j].state.cur_location - players[i].state.cur_location);
+		  float power = length(players[i].state.velocity) + length(players[j].state.velocity);
+		  players[i].state.velocity = -dir * power / 2;
+		  players[j].state.velocity = dir * power / 2;
 		}
 	  }
 	  
@@ -328,25 +328,56 @@ int main(void)
     glfwSwapBuffers(window);
     glfwPollEvents();
 	
+	//Launching for loop
 	for (unsigned int i = 0; i < 6; i ++){
+	  //See if another player is primed to launch
+	  unsigned int primed = 0;
+	  for (unsigned int m = 0; m < 6; m ++){
+		if (m != i){
+		  //if another player is primed to launch, primed is set to true
+		  if (launch[m] == true){
+			primed = 1;
+			break;
+		  }
+		  //else, primed is 0
+		  else{
+			primed = 0;
+		  }
+		}
+	  }
+	  
 	  Player player = players[i];
 	  
-	  
+	  //get state of the mouse button
 	  int state = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
-	  if (state == GLFW_PRESS){
+	  //if it is pressed and no other player is primed, prepare launch
+	  if (state == GLFW_PRESS and primed == 0){
 		if (in_out[i] == true){
 		  player.charge();
 		  launch[i] = true;
 		}
+		
+		glfwGetCursorPos(window, &xpos, &ypos);
+		xpos = xpos/width*40.0 - 20.0;
+		ypos = -(ypos/height*40.0 - 20.0);
+		
+		arrow->update_state(vec2(xpos, ypos), player.state.cur_location);
+		 
+		
 	  }
+	  //if the player is ready to launch and the button is released, get mouse coorditates and launch player
 	  else if (state == GLFW_RELEASE and launch[i] == true){
-		double xpos, ypos;
 		glfwGetCursorPos(window, &xpos, &ypos);
 		xpos = xpos/width*40.0 - 20.0;
 		ypos = -(ypos/height*40.0 - 20.0);
 		vec2 vel = player.release(vec2(xpos, ypos));
 		players[i].state.velocity = vel;
 		launch[i] = false;
+		
+		arrow->update_state(vec2(-20,-20), vec2(-20,-20));
+		
+		
+		
 	  }
 	  
 	  
@@ -355,8 +386,11 @@ int main(void)
 
 
 	}
-    
+	  
   }
+    
+	
+	
   
   glfwDestroyWindow(window);
   

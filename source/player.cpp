@@ -101,42 +101,39 @@ void Player::gl_init(){
   glBindVertexArray(0);
 
 }
+
 vec2 Player::release(vec2 cur_pos){
-	vec2 head = state.cur_location;
-	vec2 tail = cur_pos;
-	state.velocity = head - tail;
-	state.charging= false;
-	//std::cout << state.velocity << std::endl;
-	for (unsigned int i = 0; i < 20; i++){
-	  player_vert[i] = player_vert[i] + (state.velocity * 0.33);
-	}
-  return state.velocity;
+  vec2 head = state.cur_location;
+  vec2 tail = cur_pos;
+  state.charging= false;
+  return 2 * (head - tail);
+  /*
+  arrow.update_state(vec2(-20, -20), vec2(-20,-20));
+  player_vert[0] = state.cur_location + (vel * 0.033);
+  for (unsigned int i = 1; i < 20; i ++){
+	player_vert[i] = player_vert[i] + (vel * 0.033);
   }
-void Player::charge(){ state.charging= true;}
+   */
+  
+  
+}
+
+void Player::charge(){
+  state.charging= true;
+  
+  
+}
 
 
 void Player::update_state(){
 
-  state.velocity.x *= .98;
-  state.velocity.y *= .98;
-  
-   
-  //limit the velocity
-  //need to use pythagorean theorem here? What to set velocity to in this case?
-  //bc need x and y component
-  if (abs(state.velocity.x) > 10) {state.velocity.x = 10;}
-  if (abs(state.velocity.y) > 10) {state.velocity.y = 10;}
+  state.velocity.x *= .99;
+  state.velocity.y *= .99;
   
   if (abs(state.velocity.x) < .1 and abs(state.velocity.y) < .1){
 	state.velocity.x = 0;
 	state.velocity.y = 0;
   }
-  
-  //decrease velocity so that on change of direction, the original
-  //acceleration is still decreasing
-  //maybe dampen the velocity no matter what here???
-  //state.acceleration.x -= 1;
-  //state.acceleration.y -= 1;
   
   //update vertices so buffer can draw ship in new location
   for (unsigned int i = 0; i < 20; i++){
@@ -148,7 +145,7 @@ void Player::update_state(){
   state.cur_location.x += state.velocity.x * 0.033;
   state.cur_location.y += state.velocity.y * 0.033;
   
-  //detecting if ship moves beyond boundaries and flipping ship to other side
+  //detecting if player moves into the boundaries, reverse velocity
   if (state.cur_location.x > 18 or state.cur_location.x < -18){
 	state.velocity.x *= -1;
   }
@@ -157,6 +154,7 @@ void Player::update_state(){
   if (state.cur_location.y > 18 or state.cur_location.y < -18){
 	state.velocity.y *= -1;
   }
+  
 }
 
 void Player::draw(mat4 proj){
@@ -170,14 +168,7 @@ void Player::draw(mat4 proj){
   
   //Draw something
   glDrawArrays(GL_TRIANGLE_FAN, 0, 20);
-  /*
-  if(state.thruster_on){
-    //Maybe draw something different if the thruster is on
-    glDrawArrays(GL_TRIANGLES, 5, 3);
-    glDrawArrays(GL_TRIANGLES, 7, 3);
-    
-  }
-   */
+
   glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(player_vert), player_vert );
   
   glBindVertexArray(0);

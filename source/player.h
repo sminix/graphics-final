@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "common.h"
+#include "Arrow.hpp"
 
 #define _MAX_SPEED 10
 #define _DAMPING 0.98

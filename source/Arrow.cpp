@@ -1,30 +1,27 @@
 //
-//  Goal.cpp
+//  Arrow.cpp
 //  glad
 //
-//  Created by Samuel Minix on 12/5/20.
+//  Created by Samuel Minix on 12/6/20.
 //
 
-#include "Goal.hpp"
-
-Goal::Goal(vec2 loc){
-  //made goal shape and color
-  goal_vert[0] = loc;
-  goal_vert[1] = vec2(loc.x - 5, loc.y + 2);
-  goal_vert[2] = vec2(loc.x + 5, loc.y + 2);
-  goal_vert[3] = vec2(loc.x + 5, loc.y - 2);
-  goal_vert[4] = vec2(loc.x - 5, loc.y - 2);
-  goal_vert[5] = vec2(loc.x - 5, loc.y + 2);
+#include "Arrow.hpp"
+#include "common.h"
+Arrow::Arrow(){
+  //made arrow shape and color
   
-  goal_color[0] = vec3(1.0,1.0,1.0);
-  goal_color[1] = vec3(1.0,1.0,1.0);
-  goal_color[2] = vec3(1.0,1.0,1.0);
-  goal_color[3] = vec3(1.0,1.0,1.0);
-  goal_color[4] = vec3(1.0,1.0,1.0);
-  goal_color[5] = vec3(1.0,1.0,1.0);
-}
+  arrow_vert[0] = vec2(-20.0, -20.0);
+  arrow_vert[1] = vec2(-20.0, -20.0);
+  arrow_vert[2] = vec2(-20.0, -20.0);
 
-void Goal::gl_init(){
+  
+  arrow_color[0] = vec3(0.0,0.0,0.0);
+  arrow_color[1] = vec3(0.0,0.0,0.0);
+  arrow_color[2] = vec3(0.0,0.0,0.0);
+  
+};
+
+void Arrow::gl_init(){
   
   std::string vshader = shader_path + "vshader_Player.glsl";
   std::string fshader = shader_path + "fshader_Player.glsl";
@@ -66,23 +63,23 @@ void Goal::gl_init(){
   glBindBuffer( GL_ARRAY_BUFFER, GLvars.buffer );
   
   //Create GPU buffer to hold vertices and color
-  glBufferData( GL_ARRAY_BUFFER, sizeof(goal_vert) + sizeof(goal_color), NULL, GL_STATIC_DRAW );
+  glBufferData( GL_ARRAY_BUFFER, sizeof(arrow_vert) + sizeof(arrow_color), NULL, GL_STATIC_DRAW );
   //First part of array holds vertices
-  glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(goal_vert), goal_vert );
+  glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(arrow_vert), arrow_vert );
   //Second part of array hold colors (offset by sizeof(triangle))
-  glBufferSubData( GL_ARRAY_BUFFER, sizeof(goal_vert), sizeof(goal_color), goal_color );
+  glBufferSubData( GL_ARRAY_BUFFER, sizeof(arrow_vert), sizeof(arrow_color), arrow_color );
   
   glEnableVertexAttribArray(GLvars.vpos_location);
   glEnableVertexAttribArray(GLvars.vcolor_location );
   
   glVertexAttribPointer( GLvars.vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0) );
-  glVertexAttribPointer( GLvars.vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(goal_vert)) );
+  glVertexAttribPointer( GLvars.vcolor_location, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(arrow_vert)) );
   
   glBindVertexArray(0);
 
 }
 
-void Goal::draw(mat4 proj){
+void Arrow::draw(mat4 proj){
   
   glUseProgram( GLvars.program );
   glBindVertexArray( GLvars.vao );
@@ -92,18 +89,51 @@ void Goal::draw(mat4 proj){
   glUniformMatrix4fv( GLvars.M_location, 1, GL_TRUE, proj );
   
   //Draw something
-  glDrawArrays(GL_TRIANGLE_FAN, 0, 6);
-  /*
-  if(state.thruster_on){
-    //Maybe draw something different if the thruster is on
-    glDrawArrays(GL_TRIANGLES, 5, 3);
-    glDrawArrays(GL_TRIANGLES, 7, 3);
-    
-  }
-   */
-  glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(goal_vert), goal_vert );
+  glDrawArrays(GL_TRIANGLES, 0, 3);
+
+  glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(arrow_vert), arrow_vert );
   
   glBindVertexArray(0);
   glUseProgram(0);
 
+}
+
+void Arrow::update_state(vec2 cur_pos, vec2 player_pos){
+  vec2 dir = vec2(0.0,0.0);
+  
+  vec2 diff = player_pos - cur_pos;
+  
+  if (diff.x != 0 or diff.y != 0){
+	dir = normalize(diff);
+  }
+  float theta = atan(dir.y/dir.x);
+
+  arrow_vert[0] = vec2(player_pos.x + (3 * dir.x), player_pos.y + (3 * dir.y));
+  arrow_vert[1] = vec2(player_pos.x + (.5*cos(theta - M_PI/2 )), player_pos.y + (.5*sin(theta - M_PI/2)));
+  arrow_vert[2] = vec2(player_pos.x + (.5*cos(theta + M_PI/2)), player_pos.y + (.5*sin(theta + M_PI/2)));
+  /*
+  if (length(diff) < 1.5){
+	arrow_color[0] = vec3(0,1.0,0);
+	arrow_color[1] = vec3(0,1.0,0);
+	arrow_color[2] = vec3(0,1.0,0);
+  }
+  
+  else if (length(diff) < 3){
+	arrow_color[0] = vec3(0,1.0,0);
+	arrow_color[1] = vec3(0,1.0,0);
+	arrow_color[2] = vec3(0,1.0,0);
+  }
+  else if (length(diff) < 4.5){
+	arrow_color[0] = vec3(0.9,0.8,0.1);
+	arrow_color[1] = vec3(0.9,0.8,0.1);
+	arrow_color[2] = vec3(0.9,0.8,0.1);
+  }
+   
+  else{
+	arrow_color[0] = vec3(1.0,0.0,0.0);
+	arrow_color[1] = vec3(1.0,0.0,0.0);
+	arrow_color[2] = vec3(1.0,0.0,0.0);
+  }
+   */
+  //std::cout<<arrow_color[1]<<std::endl;
 }
